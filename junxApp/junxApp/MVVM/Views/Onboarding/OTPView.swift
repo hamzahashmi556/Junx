@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OTPView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @ObservedObject var onboardingVM: OnboardingViewModel
     @State var geometry: GeometryProxy
     
@@ -80,6 +82,15 @@ struct OTPView: View {
         .navigationTitle("Registration")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(toolbarVisibility, for: .navigationBar)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss.callAsFunction()
+                } label: {
+                    Image("Back")
+                }
+            }
+        })
     }
 
     func keyPressed(key: String) {
@@ -116,7 +127,9 @@ struct OTPView: View {
 }
 
 #Preview {
-    GeometryReader { geometry in
-        OTPView(onboardingVM: OnboardingViewModel(), geometry: geometry, toolbarVisibility: .hidden)
+    NavigationView {
+        GeometryReader { geometry in
+            OTPView(onboardingVM: OnboardingViewModel(), geometry: geometry, toolbarVisibility: .visible)
+        }
     }
 }
