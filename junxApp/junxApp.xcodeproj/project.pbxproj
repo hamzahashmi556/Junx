@@ -48,6 +48,12 @@
 		AB731F1A2AE598AD007ACB9F /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = AB731F152AE598AD007ACB9F /* license.txt */; };
 		AB731F1B2AE598AD007ACB9F /* Sk-Modernist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AB731F162AE598AD007ACB9F /* Sk-Modernist-Regular.otf */; };
 		AB731F1E2AE66B0C007ACB9F /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB731F1D2AE66B0C007ACB9F /* OnboardingViewModel.swift */; };
+		AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */; };
+		AB7E56552AEE6B0700B94AB0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E56542AEE6B0700B94AB0 /* HomeView.swift */; };
+		AB7E56572AEE6B1000B94AB0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E56562AEE6B1000B94AB0 /* ChatView.swift */; };
+		AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E56582AEE6B2400B94AB0 /* CardsView.swift */; };
+		AB7E565C2AEE6B2F00B94AB0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E565B2AEE6B2F00B94AB0 /* SearchView.swift */; };
+		AB7E565E2AEE6B3700B94AB0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E565D2AEE6B3700B94AB0 /* ProfileView.swift */; };
 		AB974AB42AE3159B004BC717 /* junxAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974AB32AE3159B004BC717 /* junxAppApp.swift */; };
 		AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974AB52AE3159B004BC717 /* ContentView.swift */; };
 		AB974AB82AE3159D004BC717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB974AB72AE3159D004BC717 /* Assets.xcassets */; };
@@ -101,6 +107,12 @@
 		AB731F152AE598AD007ACB9F /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
 		AB731F162AE598AD007ACB9F /* Sk-Modernist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sk-Modernist-Regular.otf"; sourceTree = "<group>"; };
 		AB731F1D2AE66B0C007ACB9F /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		AB7E56542AEE6B0700B94AB0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB7E56562AEE6B1000B94AB0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AB7E56582AEE6B2400B94AB0 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		AB7E565B2AEE6B2F00B94AB0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AB7E565D2AEE6B3700B94AB0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		AB974AB02AE3159B004BC717 /* junxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = junxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB974AB32AE3159B004BC717 /* junxAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = junxAppApp.swift; sourceTree = "<group>"; };
 		AB974AB52AE3159B004BC717 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -209,6 +221,59 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		AB7E564C2AEE67A900B94AB0 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */,
+				AB7E564F2AEE6ADA00B94AB0 /* Home */,
+				AB7E56502AEE6AE100B94AB0 /* Chat */,
+				AB7E56512AEE6AE700B94AB0 /* Cards */,
+				AB7E56522AEE6AEE00B94AB0 /* Search */,
+				AB7E56532AEE6AF500B94AB0 /* Profile */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		AB7E564F2AEE6ADA00B94AB0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E56542AEE6B0700B94AB0 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AB7E56502AEE6AE100B94AB0 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E56562AEE6B1000B94AB0 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AB7E56512AEE6AE700B94AB0 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E56582AEE6B2400B94AB0 /* CardsView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		AB7E56522AEE6AEE00B94AB0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E565B2AEE6B2F00B94AB0 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		AB7E56532AEE6AF500B94AB0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AB7E565D2AEE6B3700B94AB0 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		AB974AA72AE3159B004BC717 = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +345,7 @@
 			children = (
 				AB974AC82AE31875004BC717 /* Splash */,
 				AB974AC72AE31870004BC717 /* Onboarding */,
+				AB7E564C2AEE67A900B94AB0 /* Tabbar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -407,9 +473,11 @@
 			files = (
 				AB731F042AE56A78007ACB9F /* CustomButton.swift in Sources */,
 				AB731F0C2AE59027007ACB9F /* EmailView.swift in Sources */,
+				AB7E56572AEE6B1000B94AB0 /* ChatView.swift in Sources */,
 				AB05EB2D2AE471D9009C861C /* PhoneNumberView.swift in Sources */,
 				AB731F0A2AE58E2E007ACB9F /* TextFieldBordered.swift in Sources */,
 				AB731EFF2AE56906007ACB9F /* ForgotPasswordView.swift in Sources */,
+				AB7E56552AEE6B0700B94AB0 /* HomeView.swift in Sources */,
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
@@ -417,9 +485,13 @@
 				AB731F022AE56A54007ACB9F /* WhiteBackground.swift in Sources */,
 				AB974ACA2AE3187F004BC717 /* SplashView.swift in Sources */,
 				AB05EB2B2AE46C3C009C861C /* SelectLoginView.swift in Sources */,
+				AB7E565E2AEE6B3700B94AB0 /* ProfileView.swift in Sources */,
 				AB05EB2F2AE47657009C861C /* OTPView.swift in Sources */,
+				AB7E565C2AEE6B2F00B94AB0 /* SearchView.swift in Sources */,
 				AB731F0E2AE59089007ACB9F /* LoginView.swift in Sources */,
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
+				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
+				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,
 				AB731F1E2AE66B0C007ACB9F /* OnboardingViewModel.swift in Sources */,
 				AB974AC52AE3184E004BC717 /* Extension+Color.swift in Sources */,
 				AB974AB42AE3159B004BC717 /* junxAppApp.swift in Sources */,
