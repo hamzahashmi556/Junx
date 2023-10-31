@@ -14,7 +14,7 @@ struct StoryListView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 12) {
+            HStack(spacing: 0) {
                 ForEach(0 ..< stories.count, id: \.self) { id in
                     StoryView(numberOfStories: self.stories[id], imageResource: self.images[id])
                 }
@@ -45,7 +45,7 @@ struct StoryView: View {
                     .trim(
                         from: CGFloat(Double(index) / Double(numberOfStories) + gapWidth/2),
                         to: CGFloat(Double(index + 1) / Double(numberOfStories) - gapWidth/2))
-                    .stroke(Color.storyBorder, lineWidth: 5)
+                    .stroke(Color.greenTheme, lineWidth: 5)
             }
             
             Image(imageResource)
@@ -78,6 +78,7 @@ struct StoryView: View {
 //                .frame(width: 100, height: 100)
         }
         .frame(width: 60, height: 60)
+        .padding(.leading, 12)
     }
 }
 

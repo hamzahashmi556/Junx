@@ -64,6 +64,7 @@
 		AB974ACA2AE3187F004BC717 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974AC92AE3187F004BC717 /* SplashView.swift */; };
 		AB974ACC2AE3188C004BC717 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB974ACB2AE3188C004BC717 /* Colors.xcassets */; };
 		AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974ACD2AE31A02004BC717 /* WelcomeView.swift */; };
+		ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE866B22AF1A6EF0096415A /* AppUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		AB974AC92AE3187F004BC717 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		AB974ACB2AE3188C004BC717 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AB974ACD2AE31A02004BC717 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		ABE866B22AF1A6EF0096415A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 		AB974AC12AE31836004BC717 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				ABE866B12AF1A6E30096415A /* Models */,
 				AB731F1C2AE66AFF007ACB9F /* ViewModels */,
 				AB974AC62AE31869004BC717 /* Views */,
 			);
@@ -386,6 +389,14 @@
 				AB974AC92AE3187F004BC717 /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		ABE866B12AF1A6E30096415A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABE866B22AF1A6EF0096415A /* AppUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,6 +505,7 @@
 				AB7E56552AEE6B0700B94AB0 /* HomeView.swift in Sources */,
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
+				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
 				AB7E56632AEE7B6F00B94AB0 /* StoryView.swift in Sources */,
 				AB731F102AE59634007ACB9F /* KeyboardView.swift in Sources */,
