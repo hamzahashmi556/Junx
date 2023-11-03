@@ -23,18 +23,51 @@ struct HomeView: View {
             
             ScrollView {
                 
-                LazyVStack {
+                VStack(spacing: 0) {
+                    
+                    TitleView()
                     
                     StoryListView()
                     
                     NearYouView(width: reader.size.width - 40)
                     
-                    NewMembersView()
+                    NewMembersView(geometry: reader)
                     
                     Spacer()
+                    
                 }
             }
         }
+        .toolbar(.visible, for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Image(.menu)
+            }
+            
+            ToolbarItem(placement: .principal) {
+                Image("text+image logo")
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack {
+                    Image(.heart)
+                    Image(.notification)
+                }
+            }
+        }
+        .toolbarTitleDisplayMode(.inline)
+    }
+    
+    func TitleView() -> some View {
+        HStack {
+            Image("location")
+            
+            Text("Rawalpindi, Pakistan")
+                .font(.system(size: 14))
+                .foregroundStyle(.textSecondary)
+        }
+        .padding(.top, 15)
+        .padding(.bottom, 30)
     }
     
     func NearYouView(width: CGFloat) -> some View {
@@ -107,12 +140,13 @@ struct HomeView: View {
             }
         }
         .frame(width: width, height: width, alignment: .leading)
-        .padding(.top)
+        .padding(.top, 25)
     }
     
-    func NewMembersView() -> some View {
+    func NewMembersView(geometry: GeometryProxy) -> some View {
         
         VStack {
+            
             HStack {
                 
                 Text("New Members")
@@ -127,30 +161,53 @@ struct HomeView: View {
                     .underline()
             }
             
-            ZStack {
-                VStack(alignment: .leading) {
-                    
-                    Image(.sample1)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 76, height: 76)
-                        .clipShape(Circle())
-                    
-                    Text("Hello World")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 2)
+            LazyVGrid(columns: [.init(), .init(), .init()], content: {
+                ForEach(0..<5, id: \.self) { id in
+                    NewMemberCard(image: .sample1, title: "ABC", width: geometry.size.width / 3.65)
                 }
-            }
-            .frame(width: 106, height: 132)
-            .background {
-                Color.greyCard.clipShape(RoundedRectangle(cornerRadius: 10))
-            }
+            })
         }
         .padding(.horizontal, 20)
+        .padding(.top, 25)
+    }
+}
+
+struct NewMemberCard: View {
+    
+    var image: ImageResource
+    var title: String
+    
+    var width: CGFloat
+    
+    var body: some View {
+        ZStack {
+            VStack(alignment: .center, spacing: 0) {
+                
+                
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 76, height: 76)
+                    .clipShape(Circle())
+                    .padding(.top, 15)
+                
+                Text(title)
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 2)
+                    .padding(.top, 11.0)
+                    .padding(.bottom, 13)
+                    
+                
+            }
+        }
+        .frame(width: width, height: 132)
+        .background {
+            Color.greyCard.clipShape(RoundedRectangle(cornerRadius: 10))
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    TabbarView()
 }
