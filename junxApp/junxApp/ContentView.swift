@@ -14,7 +14,8 @@ struct ContentView: View {
     @State var showWelcome = true
     
     var body: some View {
-        
+        TabbarView()
+        /*
         NavigationStack {
             
             GeometryReader { geometry in
@@ -66,6 +67,7 @@ struct ContentView: View {
                 }
             }
         })
+         */
     }
 }
 

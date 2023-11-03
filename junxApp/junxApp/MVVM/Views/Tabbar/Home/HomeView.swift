@@ -9,13 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var users: [AppUser] = [
-        .init(name: "Arthur Morgan", description: "Lorem Ipsum Dolor Ismit", image: .sample5),
-        .init(name: "Ezio Auditore Da Firenze", description: "Requescat in Pace", image: .sample4),
-        .init(name: "Master Chief", description: "Halo The Master Chief Collection", image: .sample3),
-        .init(name: "John Marston", description: "Lorem Ipsum Dolor Ismit", image: .sample2),
-        .init(name: "Lara Croft", description: "Lorem Ipsum Dolor Ismit", image: .sample4)
-    ]
+    @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
         
@@ -80,24 +74,27 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Text("View All")
-                    .font(.customFont(name: .inter, type: .medium, size: 16))
-                    .foregroundStyle(.greenTheme)
-                    .underline()
-                    
+                NavigationLink {
+                    MembersList(title: "Near You", viewModel: self.viewModel)
+                } label: {
+                    Text("View All")
+                        .font(.customFont(name: .inter, type: .medium, size: 16))
+                        .foregroundStyle(.greenTheme)
+                        .underline()
+                }
             }
             
             ZStack {
-                ForEach(0 ..< users.count, id: \.self) { id in
+                ForEach(0 ..< viewModel.users.count, id: \.self) { id in
                     
                     HStack {
                         
                         ZStack {
                             
-                            Image(users[id].image)
+                            Image(viewModel.users[id].image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: width - CGFloat(id * 10), height: 330 - CGFloat((users.count - id) * 10))
+                                .frame(width: width - CGFloat(id * 10), height: 330 - CGFloat((viewModel.users.count - id) * 10))
                                 .scaledToFill()
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
                             
@@ -132,7 +129,7 @@ struct HomeView: View {
                                 }
                             }
                         }
-                        .frame(width: width - CGFloat(id * 10), height: 330 - CGFloat((users.count - id) * 10))
+                        .frame(width: width - CGFloat(id * 10), height: 330 - CGFloat((viewModel.users.count - id) * 10))
 
                         Spacer()
                     }
@@ -155,10 +152,14 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Text("View All")
-                    .font(.customFont(name: .inter, type: .medium, size: 16))
-                    .foregroundStyle(.greenTheme)
-                    .underline()
+                NavigationLink {
+                    MembersList(title: "New Members", viewModel: self.viewModel)
+                } label: {
+                    Text("View All")
+                        .font(.customFont(name: .inter, type: .medium, size: 16))
+                        .foregroundStyle(.greenTheme)
+                        .underline()
+                }
             }
             
             LazyVGrid(columns: [.init(), .init(), .init()], content: {

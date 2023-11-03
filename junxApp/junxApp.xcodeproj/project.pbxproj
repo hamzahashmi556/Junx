@@ -64,6 +64,8 @@
 		AB974ACA2AE3187F004BC717 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974AC92AE3187F004BC717 /* SplashView.swift */; };
 		AB974ACC2AE3188C004BC717 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB974ACB2AE3188C004BC717 /* Colors.xcassets */; };
 		AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB974ACD2AE31A02004BC717 /* WelcomeView.swift */; };
+		ABAF0A112AF595B400ED358A /* MembersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A102AF595B400ED358A /* MembersList.swift */; };
+		ABAF0A132AF595C600ED358A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A122AF595C600ED358A /* HomeViewModel.swift */; };
 		ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE866B22AF1A6EF0096415A /* AppUser.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		AB974AC92AE3187F004BC717 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		AB974ACB2AE3188C004BC717 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AB974ACD2AE31A02004BC717 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		ABAF0A102AF595B400ED358A /* MembersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersList.swift; sourceTree = "<group>"; };
+		ABAF0A122AF595C600ED358A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		ABE866B22AF1A6EF0096415A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				AB731F1D2AE66B0C007ACB9F /* OnboardingViewModel.swift */,
+				ABAF0A122AF595C600ED358A /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			children = (
 				AB7E56542AEE6B0700B94AB0 /* HomeView.swift */,
 				AB7E56622AEE7B6F00B94AB0 /* StoryView.swift */,
+				ABAF0A102AF595B400ED358A /* MembersList.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -505,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB731F042AE56A78007ACB9F /* CustomButton.swift in Sources */,
+				ABAF0A112AF595B400ED358A /* MembersList.swift in Sources */,
 				AB731F0C2AE59027007ACB9F /* EmailView.swift in Sources */,
 				AB7E56572AEE6B1000B94AB0 /* ChatView.swift in Sources */,
 				AB05EB2D2AE471D9009C861C /* PhoneNumberView.swift in Sources */,
@@ -532,6 +539,7 @@
 				AB7E56612AEE7B3000B94AB0 /* NavigationBar.swift in Sources */,
 				AB974AB42AE3159B004BC717 /* junxAppApp.swift in Sources */,
 				AB731F082AE58180007ACB9F /* TextFieldOTP.swift in Sources */,
+				ABAF0A132AF595C600ED358A /* HomeViewModel.swift in Sources */,
 				AB731F062AE56AAF007ACB9F /* OnboardingTopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

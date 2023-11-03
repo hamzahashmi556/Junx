@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoryListView: View {
     
-    @State var stories: [Int] = []
+    @State var stories: [Int] = [1,2,3,4,5]
     @State var images: [ImageResource] = [.ellipse10, .ellipse101, .ellipse102, .ellipse103, .ellipse104]
     
     var body: some View {
@@ -21,11 +21,6 @@ struct StoryListView: View {
             }
             .padding(.vertical, 5)
         }
-        .onAppear(perform: {
-            for i in 1...5 {
-                stories.append(i)
-            }
-        })
     }
 }
 
