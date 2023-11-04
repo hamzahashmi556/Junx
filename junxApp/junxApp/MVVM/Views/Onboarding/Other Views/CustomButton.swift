@@ -34,6 +34,58 @@ struct CustomButton: View {
     }
 }
 
+struct CustomButtonLightGreen: View {
+    
+    @State var title: String
+    
+    @State var width: CGFloat
+    
+    @State var action: () -> Void
+    
+    var body: some View {
+        
+        Button(action: action) {
+            ZStack {
+               Color("button linear 2")
+                .clipShape(RoundedRectangle(cornerRadius: 32))
+                
+                Text(title)
+                    .font(.customFont(name: .inter, type: .light, size: 14))
+                
+            }
+            .foregroundStyle(.white)
+            .frame(width: width, height: width * 0.2)
+        }
+    }
+}
+
+
+struct CustomBorderButton: View {
+    
+    @State var title: String
+    
+    @State var width: CGFloat
+    
+    @State var action: () -> Void
+    
+    var body: some View {
+        
+        Button(action: action) {
+            ZStack {
+               Color("button linear 2")
+                .clipShape(RoundedRectangle(cornerRadius: 32))
+                
+                Text(title)
+                    .font(.customFont(name: .inter, type: .light, size: 14))
+                
+            }
+            .foregroundStyle(.white)
+            .frame(width: width, height: width * 0.2)
+        }
+    }
+}
+
+
 #Preview {
     CustomButton(title: "Tester", width: 375, action: {
         
