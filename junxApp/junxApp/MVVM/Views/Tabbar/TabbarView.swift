@@ -10,13 +10,15 @@ import SwiftUI
 
 struct TabbarView: View {
     
+    @ObservedObject var homeVM: HomeViewModel
+    
     @State var index = 0
     
     var body: some View {
         
         TabView(selection: $index) {
             NavigationStack {
-                HomeView()
+                HomeView(viewModel: homeVM)
             }
             .tag(0)
             .tabItem {
@@ -55,9 +57,10 @@ struct TabbarView: View {
             }
 
         }
+        .preferredColorScheme(.light)
     }
 }
 
 #Preview {
-    TabbarView()
+    TabbarView(homeVM: HomeViewModel())
 }

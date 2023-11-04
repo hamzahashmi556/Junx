@@ -16,4 +16,16 @@ class HomeViewModel: ObservableObject {
         .init(name: "John Marston", description: "Lorem Ipsum Dolor Ismit", image: .sample2),
         .init(name: "Lara Croft", description: "Lorem Ipsum Dolor Ismit", image: .sample4)
     ]
+    
+    @Published var isPresentAddFilter = false
+    @Published var isFilterApplied = false
+    @Published var isPresentFilterView = false
+    
+    @Published var filterType: FilterType = .distance
+}
+
+enum FilterType {
+    case location
+    case distance
+    case gender
 }
