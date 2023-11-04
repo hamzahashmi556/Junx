@@ -10,20 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var onboardingVM = OnboardingViewModel()
+    
+    @StateObject var homeVM = HomeViewModel()
+    
     @State var showSplash = true
+    
     @State var showWelcome = true
     
     var body: some View {
-        TabbarView()
-        /*
-        NavigationStack {
             
-            GeometryReader { geometry in
-                
+        GeometryReader { geometry in
+            ZStack {
                 if showSplash {
                     SplashView()
                 }
                 else {
+                    TabbarView(homeVM: homeVM)
+                    /*
                     if onboardingVM.showWelcome {
                         TabView(selection: $onboardingVM.welcomeIndex,
                                 content:  {
@@ -57,17 +60,18 @@ struct ContentView: View {
                                 LoginView(onboardingVM: onboardingVM, geometry: geometry).navigationBarBackButtonHidden()
                             }
                     }
+                    */
                 }
             }
+            .onAppear(perform: {
+                Constants.size = geometry.size
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    withAnimation {
+                        self.showSplash = false
+                    }
+                }
+            })
         }
-        .onAppear(perform: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation {
-                    self.showSplash = false
-                }
-            }
-        })
-         */
     }
 }
 

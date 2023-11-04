@@ -9,27 +9,24 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
         
-        GeometryReader { reader in
+        ScrollView {
             
-            ScrollView {
+            VStack(spacing: 0) {
                 
-                VStack(spacing: 0) {
-                    
-                    TitleView()
-                    
-                    StoryListView()
-                    
-                    NearYouView(width: reader.size.width - 40)
-                    
-                    NewMembersView(geometry: reader)
-                    
-                    Spacer()
-                    
-                }
+                TitleView()
+                
+                StoryListView()
+                
+                NearYouView(width: Constants.size.width - 40)
+                
+                NewMembersView()
+                
+                Spacer()
+                
             }
         }
         .toolbar(.visible, for: .navigationBar)
@@ -65,7 +62,9 @@ struct HomeView: View {
     }
     
     func NearYouView(width: CGFloat) -> some View {
+        
         VStack(alignment: .leading) {
+            
             HStack {
                 
                 Text("Near You")
@@ -75,7 +74,7 @@ struct HomeView: View {
                 Spacer()
                 
                 NavigationLink {
-                    MembersList(title: "Near You", viewModel: self.viewModel)
+                    MembersList(viewModel: self.viewModel, title: "Near You")
                 } label: {
                     Text("View All")
                         .font(.customFont(name: .inter, type: .medium, size: 16))
@@ -97,6 +96,11 @@ struct HomeView: View {
                                 .frame(width: width - CGFloat(id * 10), height: 330 - CGFloat((viewModel.users.count - id) * 10))
                                 .scaledToFill()
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                                .onAppear(perform: {
+                                    debugPrint("\n Width:")
+                                    debugPrint(width - CGFloat(id * 10))
+                                    debugPrint("Width: \n")
+                                })
                             
                             VStack {
                                 
@@ -140,7 +144,7 @@ struct HomeView: View {
         .padding(.top, 25)
     }
     
-    func NewMembersView(geometry: GeometryProxy) -> some View {
+    func NewMembersView() -> some View {
         
         VStack {
             
@@ -153,7 +157,7 @@ struct HomeView: View {
                 Spacer()
                 
                 NavigationLink {
-                    MembersList(title: "New Members", viewModel: self.viewModel)
+                    MembersList(viewModel: self.viewModel, title: "New Members")
                 } label: {
                     Text("View All")
                         .font(.customFont(name: .inter, type: .medium, size: 16))
@@ -164,7 +168,7 @@ struct HomeView: View {
             
             LazyVGrid(columns: [.init(), .init(), .init()], content: {
                 ForEach(0..<5, id: \.self) { id in
-                    NewMemberCard(image: .sample1, title: "ABC", width: geometry.size.width / 3.65)
+                    NewMemberCard(image: .sample1, title: "ABC", width: Constants.size.width / 3.65)
                 }
             })
         }
@@ -210,5 +214,5 @@ struct NewMemberCard: View {
 }
 
 #Preview {
-    TabbarView()
+    TabbarView(homeVM: HomeViewModel())
 }
