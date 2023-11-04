@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188C352A2AF6494000904BDA /* NewLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35292AF6494000904BDA /* NewLocationScreen.swift */; };
+		188C352C2AF6DD1600904BDA /* ConfirmDeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C352B2AF6DD1600904BDA /* ConfirmDeleteScreen.swift */; };
 		AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EAF72AE462F2009C861C /* LandingView.swift */; };
 		AB05EB082AE46334009C861C /* Manuale-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */; };
 		AB05EB092AE46334009C861C /* Manuale-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */; };
@@ -70,6 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188C35292AF6494000904BDA /* NewLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationScreen.swift; sourceTree = "<group>"; };
+		188C352B2AF6DD1600904BDA /* ConfirmDeleteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteScreen.swift; sourceTree = "<group>"; };
 		AB05EAF72AE462F2009C861C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-LightItalic.ttf"; sourceTree = "<group>"; };
 		AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-Italic.ttf"; sourceTree = "<group>"; };
@@ -145,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188C35282AF6489700904BDA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				188C35292AF6494000904BDA /* NewLocationScreen.swift */,
+				188C352B2AF6DD1600904BDA /* ConfirmDeleteScreen.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		AB05EAF92AE46320009C861C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +248,7 @@
 		AB7E564C2AEE67A900B94AB0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				188C35282AF6489700904BDA /* Location */,
 				AB7E565F2AEE7B2200B94AB0 /* Navigation */,
 				AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */,
 				AB7E564F2AEE6ADA00B94AB0 /* Home */,
@@ -294,13 +308,6 @@
 				AB7E56602AEE7B3000B94AB0 /* NavigationBar.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		AB935DD62AF55D5300F62B96 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		AB974AA72AE3159B004BC717 = {
@@ -373,7 +380,6 @@
 		AB974AC62AE31869004BC717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AB935DD62AF55D5300F62B96 /* Custom Views */,
 				AB974AC82AE31875004BC717 /* Splash */,
 				AB974AC72AE31870004BC717 /* Onboarding */,
 				AB7E564C2AEE67A900B94AB0 /* Tabbar */,
@@ -515,6 +521,7 @@
 				AB731F0C2AE59027007ACB9F /* EmailView.swift in Sources */,
 				AB7E56572AEE6B1000B94AB0 /* ChatView.swift in Sources */,
 				AB05EB2D2AE471D9009C861C /* PhoneNumberView.swift in Sources */,
+				188C352C2AF6DD1600904BDA /* ConfirmDeleteScreen.swift in Sources */,
 				AB731F0A2AE58E2E007ACB9F /* TextFieldBordered.swift in Sources */,
 				AB731EFF2AE56906007ACB9F /* ForgotPasswordView.swift in Sources */,
 				AB7E56552AEE6B0700B94AB0 /* HomeView.swift in Sources */,
@@ -531,6 +538,7 @@
 				AB05EB2F2AE47657009C861C /* OTPView.swift in Sources */,
 				AB7E565C2AEE6B2F00B94AB0 /* SearchView.swift in Sources */,
 				AB731F0E2AE59089007ACB9F /* LoginView.swift in Sources */,
+				188C352A2AF6494000904BDA /* NewLocationScreen.swift in Sources */,
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
 				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
 				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,

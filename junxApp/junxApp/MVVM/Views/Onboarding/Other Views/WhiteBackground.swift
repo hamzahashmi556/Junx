@@ -24,6 +24,23 @@ struct WhiteBackground: View {
     }
 }
 
+struct tintBackground: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        if colorScheme == .light {
+            Color.black.opacity(0.7)
+                       .edgesIgnoringSafeArea(.all)
+        }
+        else {
+            Color.black.opacity(0.8)
+                       .edgesIgnoringSafeArea(.all)
+            .ignoresSafeArea()
+        }
+    }
+}
+
 #Preview {
     WhiteBackground()
 }
