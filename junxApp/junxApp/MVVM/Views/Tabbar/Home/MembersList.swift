@@ -48,9 +48,15 @@ struct MembersList: View {
             
             ToolbarItem(placement: .topBarLeading) {
                 Image(systemName: "chevron.left")
+                    .onTapGesture {
+                        self.dismiss.callAsFunction()
+                    }
             }
         })
         .toolbarTitleDisplayMode(.inline)
+        .sheet(isPresented: $viewModel.isPresentExplore, content: {
+            ExploreView(homeVM: viewModel)
+        })
         .sheet(isPresented: $viewModel.isPresentAddFilter, content: {
             AddFilterView(homeVM: viewModel)
         })
@@ -118,6 +124,7 @@ struct MemberColoumn: View {
                 
                 Text(user.name)
                     .font(.customFont(name: .manuale, type: .semiBold, size: 18))
+                    .multilineTextAlignment(.center)
                 
                 HStack {
                     Image(.eye)

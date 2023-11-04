@@ -68,6 +68,7 @@
 		ABAF0A152AF5B00000ED358A /* AddFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A142AF5B00000ED358A /* AddFilterView.swift */; };
 		ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A172AF699D500ED358A /* FilterView.swift */; };
 		ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A192AF6AAB700ED358A /* Constants.swift */; };
+		ABAF0A1C2AF6DD6200ED358A /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A1B2AF6DD6200ED358A /* ExploreView.swift */; };
 		ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE866B22AF1A6EF0096415A /* AppUser.swift */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		ABAF0A142AF5B00000ED358A /* AddFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFilterView.swift; sourceTree = "<group>"; };
 		ABAF0A172AF699D500ED358A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		ABAF0A192AF6AAB700ED358A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ABAF0A1B2AF6DD6200ED358A /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		ABE866B22AF1A6EF0096415A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +259,7 @@
 				ABAF0A102AF595B400ED358A /* MembersList.swift */,
 				ABAF0A142AF5B00000ED358A /* AddFilterView.swift */,
 				ABAF0A172AF699D500ED358A /* FilterView.swift */,
+				ABAF0A1B2AF6DD6200ED358A /* ExploreView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
 				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
+				ABAF0A1C2AF6DD6200ED358A /* ExploreView.swift in Sources */,
 				ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */,
 				AB7E56632AEE7B6F00B94AB0 /* StoryView.swift in Sources */,
 				AB731F102AE59634007ACB9F /* KeyboardView.swift in Sources */,
