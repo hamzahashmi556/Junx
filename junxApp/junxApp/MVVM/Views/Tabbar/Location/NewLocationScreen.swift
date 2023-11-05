@@ -96,7 +96,7 @@ struct NewLocationScreen: View {
                         .padding(.horizontal, 25)
                     }
                 )
-        }
+        }.frame(width: geometry.size.width)
     }
 }
 

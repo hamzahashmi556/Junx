@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188C352E2AF6DE9600904BDA /* Location in Resources */ = {isa = PBXBuildFile; fileRef = 188C352D2AF6DE9600904BDA /* Location */; };
+		188C35322AF6DF4C00904BDA /* NewLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */; };
+		188C35332AF6DF4C00904BDA /* ConfirmDeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */; };
+		188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */; };
 		AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EAF72AE462F2009C861C /* LandingView.swift */; };
 		AB05EB082AE46334009C861C /* Manuale-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */; };
 		AB05EB092AE46334009C861C /* Manuale-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */; };
@@ -72,6 +76,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188C352D2AF6DE9600904BDA /* Location */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Location; sourceTree = "<group>"; };
+		188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewLocationScreen.swift; path = junxApp/MVVM/Views/Tabbar/Location/NewLocationScreen.swift; sourceTree = SOURCE_ROOT; };
+		188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmDeleteScreen.swift; path = junxApp/MVVM/Views/Tabbar/Location/ConfirmDeleteScreen.swift; sourceTree = SOURCE_ROOT; };
+		188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailScreen.swift; sourceTree = "<group>"; };
 		AB05EAF72AE462F2009C861C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-LightItalic.ttf"; sourceTree = "<group>"; };
 		AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-Italic.ttf"; sourceTree = "<group>"; };
@@ -149,6 +157,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188C352F2AF6DF3400904BDA /* LocationScreens */ = {
+			isa = PBXGroup;
+			children = (
+				188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */,
+				188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */,
+				188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */,
+			);
+			path = LocationScreens;
+			sourceTree = "<group>";
+		};
 		AB05EAF92AE46320009C861C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +257,8 @@
 		AB7E564C2AEE67A900B94AB0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				188C352F2AF6DF3400904BDA /* LocationScreens */,
+				188C352D2AF6DE9600904BDA /* Location */,
 				AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */,
 				AB7E564F2AEE6ADA00B94AB0 /* Home */,
 				AB7E56502AEE6AE100B94AB0 /* Chat */,
@@ -291,13 +311,6 @@
 				AB7E565D2AEE6B3700B94AB0 /* ProfileView.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		AB935DD62AF55D5300F62B96 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		AB974AA72AE3159B004BC717 = {
@@ -371,7 +384,6 @@
 		AB974AC62AE31869004BC717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AB935DD62AF55D5300F62B96 /* Custom Views */,
 				AB974AC82AE31875004BC717 /* Splash */,
 				AB974AC72AE31870004BC717 /* Onboarding */,
 				AB7E564C2AEE67A900B94AB0 /* Tabbar */,
@@ -498,6 +510,7 @@
 				AB05EB0A2AE46334009C861C /* Manuale-SemiBold.ttf in Resources */,
 				AB05EB292AE46505009C861C /* Inter-Regular.ttf in Resources */,
 				AB05EB0E2AE46334009C861C /* Manuale-MediumItalic.ttf in Resources */,
+				188C352E2AF6DE9600904BDA /* Location in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +532,7 @@
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
 				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
+				188C35322AF6DF4C00904BDA /* NewLocationScreen.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
 				ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */,
 				AB7E56632AEE7B6F00B94AB0 /* StoryView.swift in Sources */,
@@ -532,9 +546,11 @@
 				AB731F0E2AE59089007ACB9F /* LoginView.swift in Sources */,
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
 				ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */,
+				188C35332AF6DF4C00904BDA /* ConfirmDeleteScreen.swift in Sources */,
 				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
 				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,
 				ABAF0A152AF5B00000ED358A /* AddFilterView.swift in Sources */,
+				188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */,
 				AB731F1E2AE66B0C007ACB9F /* OnboardingViewModel.swift in Sources */,
 				AB974AC52AE3184E004BC717 /* Extension+Color.swift in Sources */,
 				AB974AB42AE3159B004BC717 /* junxAppApp.swift in Sources */,
