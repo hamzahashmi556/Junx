@@ -228,6 +228,13 @@
 			path = Inter;
 			sourceTree = "<group>";
 		};
+		AB59A2382AF834E1004B7FE5 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 		AB731F002AE56A33007ACB9F /* Other Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +400,7 @@
 		AB974AC62AE31869004BC717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB59A2382AF834E1004B7FE5 /* Custom Views */,
 				AB974AC82AE31875004BC717 /* Splash */,
 				AB974AC72AE31870004BC717 /* Onboarding */,
 				AB7E564C2AEE67A900B94AB0 /* Tabbar */,
