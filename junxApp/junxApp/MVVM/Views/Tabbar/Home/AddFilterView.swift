@@ -47,6 +47,7 @@ struct AddFilterView: View {
             }
         }
         .presentationDetents([.medium])
+        .presentationDragIndicator(.visible)
     }
 }
 
