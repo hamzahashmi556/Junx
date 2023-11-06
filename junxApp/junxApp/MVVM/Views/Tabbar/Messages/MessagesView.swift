@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  MessagesView.swift
 //  junxApp
 //
 //  Created by Hamza Hashmi on 29/10/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatView: View {
+struct MessagesView: View {
     
     @State var searchText = ""
     @State var isSearching = false
@@ -187,6 +187,6 @@ struct CircularImageView: View {
 
 #Preview {
     NavigationView {
-        ChatView()
+        MessagesView()
     }
 }
