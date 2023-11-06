@@ -25,7 +25,7 @@ struct TabbarView: View {
                 Image(index == 0 ? .homeSelected : .homeUnselected)
             }
             NavigationStack {
-                ChatView()
+                MessagesView()
             }
             .tag(1)
             .tabItem {
