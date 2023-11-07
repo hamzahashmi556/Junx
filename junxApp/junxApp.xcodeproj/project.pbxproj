@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		188C352E2AF6DE9600904BDA /* Location in Resources */ = {isa = PBXBuildFile; fileRef = 188C352D2AF6DE9600904BDA /* Location */; };
-		188C35322AF6DF4C00904BDA /* NewLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */; };
-		188C35332AF6DF4C00904BDA /* ConfirmDeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */; };
 		188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */; };
 		188C35372AF81B6500904BDA /* EmergencyContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */; };
 		188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35382AF82B7800904BDA /* ConfirmSafety.swift */; };
@@ -40,6 +37,8 @@
 		AB05EB2B2AE46C3C009C861C /* SelectLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EB2A2AE46C3C009C861C /* SelectLoginView.swift */; };
 		AB05EB2D2AE471D9009C861C /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EB2C2AE471D9009C861C /* PhoneNumberView.swift */; };
 		AB05EB2F2AE47657009C861C /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EB2E2AE47657009C861C /* OTPView.swift */; };
+		AB31A8842AFAA42900D14F62 /* ConfirmDeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31A8832AFAA42900D14F62 /* ConfirmDeleteScreen.swift */; };
+		AB31A8852AFAA42900D14F62 /* NewLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31A8822AFAA42900D14F62 /* NewLocationScreen.swift */; };
 		AB59A23A2AF931CC004B7FE5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2392AF931CC004B7FE5 /* ChatView.swift */; };
 		AB59A2402AF941EC004B7FE5 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23C2AF941EC004B7FE5 /* Mulish-Medium.ttf */; };
 		AB59A2412AF941EC004B7FE5 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23D2AF941EC004B7FE5 /* Mulish-Regular.ttf */; };
@@ -86,9 +85,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		188C352D2AF6DE9600904BDA /* Location */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Location; sourceTree = "<group>"; };
-		188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewLocationScreen.swift; path = junxApp/MVVM/Views/Tabbar/Location/NewLocationScreen.swift; sourceTree = SOURCE_ROOT; };
-		188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmDeleteScreen.swift; path = junxApp/MVVM/Views/Tabbar/Location/ConfirmDeleteScreen.swift; sourceTree = SOURCE_ROOT; };
 		188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailScreen.swift; sourceTree = "<group>"; };
 		188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactScreen.swift; sourceTree = "<group>"; };
 		188C35382AF82B7800904BDA /* ConfirmSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSafety.swift; sourceTree = "<group>"; };
@@ -120,6 +116,8 @@
 		AB05EB2A2AE46C3C009C861C /* SelectLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLoginView.swift; sourceTree = "<group>"; };
 		AB05EB2C2AE471D9009C861C /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		AB05EB2E2AE47657009C861C /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		AB31A8822AFAA42900D14F62 /* NewLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationScreen.swift; sourceTree = "<group>"; };
+		AB31A8832AFAA42900D14F62 /* ConfirmDeleteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteScreen.swift; sourceTree = "<group>"; };
 		AB59A2392AF931CC004B7FE5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		AB59A23C2AF941EC004B7FE5 /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
 		AB59A23D2AF941EC004B7FE5 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
@@ -180,8 +178,8 @@
 		188C352F2AF6DF3400904BDA /* LocationScreens */ = {
 			isa = PBXGroup;
 			children = (
-				188C35312AF6DF4C00904BDA /* ConfirmDeleteScreen.swift */,
-				188C35302AF6DF4C00904BDA /* NewLocationScreen.swift */,
+				AB31A8832AFAA42900D14F62 /* ConfirmDeleteScreen.swift */,
+				AB31A8822AFAA42900D14F62 /* NewLocationScreen.swift */,
 				188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */,
 				188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */,
 				188C35382AF82B7800904BDA /* ConfirmSafety.swift */,
@@ -300,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				188C352F2AF6DF3400904BDA /* LocationScreens */,
-				188C352D2AF6DE9600904BDA /* Location */,
 				AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */,
 				AB7E564F2AEE6ADA00B94AB0 /* Home */,
 				AB7E56502AEE6AE100B94AB0 /* Messages */,
@@ -559,7 +556,6 @@
 				AB05EB0A2AE46334009C861C /* Manuale-SemiBold.ttf in Resources */,
 				AB05EB292AE46505009C861C /* Inter-Regular.ttf in Resources */,
 				AB05EB0E2AE46334009C861C /* Manuale-MediumItalic.ttf in Resources */,
-				188C352E2AF6DE9600904BDA /* Location in Resources */,
 				AB59A2412AF941EC004B7FE5 /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +580,6 @@
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
 				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
-				188C35322AF6DF4C00904BDA /* NewLocationScreen.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
 				ABAF0A1C2AF6DD6200ED358A /* ExploreView.swift in Sources */,
 				ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */,
@@ -600,10 +595,11 @@
 				AB731F0E2AE59089007ACB9F /* LoginView.swift in Sources */,
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
 				AB59A23A2AF931CC004B7FE5 /* ChatView.swift in Sources */,
+				AB31A8852AFAA42900D14F62 /* NewLocationScreen.swift in Sources */,
 				188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */,
 				ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */,
-				188C35332AF6DF4C00904BDA /* ConfirmDeleteScreen.swift in Sources */,
 				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
+				AB31A8842AFAA42900D14F62 /* ConfirmDeleteScreen.swift in Sources */,
 				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,
 				ABAF0A152AF5B00000ED358A /* AddFilterView.swift in Sources */,
 				188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */,
