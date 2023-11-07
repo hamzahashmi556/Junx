@@ -20,6 +20,7 @@ enum FontName: String {
     case inter = "Inter"
     case skModernist = "Sk-Modernist"
     case mulish = "Mulish"
+    case roboto = "Roboto"
 }
 
 enum FontsType: String {
