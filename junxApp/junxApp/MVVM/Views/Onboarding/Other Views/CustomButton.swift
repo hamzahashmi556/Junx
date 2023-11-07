@@ -34,6 +34,37 @@ struct CustomButton: View {
     }
 }
 
+struct CircleButton : View {
+    @State var title: String
+    
+    @State var width: CGFloat
+    
+    @State var height: CGFloat
+    
+    @State var action: () -> Void
+   
+    var body: some View {
+       
+        Button(action: action) {
+            ZStack {
+                LinearGradient(colors: [.buttonLinear1, .buttonLinear2],
+                               startPoint: .leading,
+                               endPoint: .trailing)
+                .clipShape(Circle())
+                
+                Image("Vector 5")
+                    .resizable()
+                    .frame(width: 25, height: 16)
+                
+            }
+            .foregroundStyle(.white)
+            .frame(width: width, height: height)
+        }
+    }
+}
+
+
+
 struct CustomButtonLightGreen: View {
     
     @State var title: String
