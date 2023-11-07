@@ -14,6 +14,8 @@
 		188C35372AF81B6500904BDA /* EmergencyContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */; };
 		188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35382AF82B7800904BDA /* ConfirmSafety.swift */; };
 		188C353B2AF9777100904BDA /* CheckInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C353A2AF9777100904BDA /* CheckInScreen.swift */; };
+		188C353F2AFA921500904BDA /* ConfirmChatdeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C353E2AFA921500904BDA /* ConfirmChatdeleteScreen.swift */; };
+		188C35412AFACB2700904BDA /* DecidePlaceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35402AFACB2700904BDA /* DecidePlaceScreen.swift */; };
 		AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EAF72AE462F2009C861C /* LandingView.swift */; };
 		AB05EB082AE46334009C861C /* Manuale-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */; };
 		AB05EB092AE46334009C861C /* Manuale-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */; };
@@ -92,6 +94,8 @@
 		188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactScreen.swift; sourceTree = "<group>"; };
 		188C35382AF82B7800904BDA /* ConfirmSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSafety.swift; sourceTree = "<group>"; };
 		188C353A2AF9777100904BDA /* CheckInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInScreen.swift; sourceTree = "<group>"; };
+		188C353E2AFA921500904BDA /* ConfirmChatdeleteScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmChatdeleteScreen.swift; sourceTree = "<group>"; };
+		188C35402AFACB2700904BDA /* DecidePlaceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecidePlaceScreen.swift; sourceTree = "<group>"; };
 		AB05EAF72AE462F2009C861C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-LightItalic.ttf"; sourceTree = "<group>"; };
 		AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-Italic.ttf"; sourceTree = "<group>"; };
@@ -325,8 +329,10 @@
 		AB7E56502AEE6AE100B94AB0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				188C353E2AFA921500904BDA /* ConfirmChatdeleteScreen.swift */,
 				AB7E56562AEE6B1000B94AB0 /* MessagesView.swift */,
 				AB59A2392AF931CC004B7FE5 /* ChatView.swift */,
+				188C35402AFACB2700904BDA /* DecidePlaceScreen.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 				AB7E56552AEE6B0700B94AB0 /* HomeView.swift in Sources */,
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
+				188C353F2AFA921500904BDA /* ConfirmChatdeleteScreen.swift in Sources */,
 				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
 				188C35322AF6DF4C00904BDA /* NewLocationScreen.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
@@ -600,6 +607,7 @@
 				ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */,
 				188C35332AF6DF4C00904BDA /* ConfirmDeleteScreen.swift in Sources */,
 				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
+				188C35412AFACB2700904BDA /* DecidePlaceScreen.swift in Sources */,
 				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,
 				ABAF0A152AF5B00000ED358A /* AddFilterView.swift in Sources */,
 				188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */,
