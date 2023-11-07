@@ -33,7 +33,7 @@ struct TabbarView: View {
             }
             
             NavigationStack {
-                CardsView()
+                CardsView(homeVM: homeVM)
             }
             .tag(2)
             .tabItem {
