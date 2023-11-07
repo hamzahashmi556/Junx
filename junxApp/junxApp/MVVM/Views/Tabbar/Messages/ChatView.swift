@@ -12,6 +12,8 @@ struct ChatView: View {
     @Environment(\.dismiss) var dismiss
 
     @State private var newMessage = ""
+    
+    @State private var showMessages = false
   
     var body: some View {
         
@@ -60,6 +62,11 @@ struct ChatView: View {
                 }
                 .padding([.bottom, .horizontal])
             }
+            
+            if showMessages {
+                ChatOptionsView()
+            }
+            
         }
         .toolbar {
             
@@ -82,6 +89,11 @@ struct ChatView: View {
                     Image(systemName: "magnifyingglass")
 
                     Image(systemName: "line.horizontal.3")
+                        .onTapGesture {
+                            withAnimation {
+                                self.showMessages.toggle()
+                            }
+                        }
                 }
             }
         }
