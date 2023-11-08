@@ -10,11 +10,11 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     @Published var users: [AppUser] = [
-        .init(name: "Arthur Morgan", description: "Lorem Ipsum Dolor Ismit", image: .sample1),
-        .init(name: "Ezio Auditore Da Firenze", description: "Requescat in Pace", image: .sample2),
-        .init(name: "Master Chief", description: "Halo The Master Chief Collection", image: .sample3),
-        .init(name: "John Marston", description: "Lorem Ipsum Dolor Ismit", image: .sample5),
-        .init(name: "Lara Croft", description: "Lorem Ipsum Dolor Ismit", image: .sample4)
+        .init(id: 0, name: "Arthur Morgan", description: "Lorem Ipsum Dolor Ismit", image: .sample1),
+        .init(id: 1, name: "Ezio Auditore Da Firenze", description: "Requescat in Pace", image: .sample2),
+        .init(id: 2, name: "Master Chief", description: "Halo The Master Chief Collection", image: .sample3),
+        .init(id: 3, name: "John Marston", description: "Lorem Ipsum Dolor Ismit", image: .sample5),
+        .init(id: 4, name: "Lara Croft", description: "Lorem Ipsum Dolor Ismit", image: .sample4)
     ]
     
     @Published var isPresentAddFilter = false
