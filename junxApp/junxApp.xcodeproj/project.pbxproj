@@ -42,11 +42,15 @@
 		AB05EB2F2AE47657009C861C /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EB2E2AE47657009C861C /* OTPView.swift */; };
 		AB31A8842AFAA42900D14F62 /* ConfirmDeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31A8832AFAA42900D14F62 /* ConfirmDeleteScreen.swift */; };
 		AB31A8852AFAA42900D14F62 /* NewLocationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31A8822AFAA42900D14F62 /* NewLocationScreen.swift */; };
+		AB31A8872AFAA50700D14F62 /* ArrangeMeetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31A8862AFAA50700D14F62 /* ArrangeMeetupView.swift */; };
 		AB59A23A2AF931CC004B7FE5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59A2392AF931CC004B7FE5 /* ChatView.swift */; };
 		AB59A2402AF941EC004B7FE5 /* Mulish-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23C2AF941EC004B7FE5 /* Mulish-Medium.ttf */; };
 		AB59A2412AF941EC004B7FE5 /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23D2AF941EC004B7FE5 /* Mulish-Regular.ttf */; };
 		AB59A2422AF941EC004B7FE5 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23E2AF941EC004B7FE5 /* Mulish-Bold.ttf */; };
 		AB59A2432AF941EC004B7FE5 /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB59A23F2AF941EC004B7FE5 /* Mulish-SemiBold.ttf */; };
+		AB6F6B872AFAD5EF004E0DAE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6F6B842AFAD5EF004E0DAE /* Roboto-Regular.ttf */; };
+		AB6F6B882AFAD5EF004E0DAE /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6F6B852AFAD5EF004E0DAE /* Roboto-Bold.ttf */; };
+		AB6F6B892AFAD5EF004E0DAE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6F6B862AFAD5EF004E0DAE /* Roboto-Medium.ttf */; };
 		AB731EFF2AE56906007ACB9F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB731EFE2AE56906007ACB9F /* ForgotPasswordView.swift */; };
 		AB731F022AE56A54007ACB9F /* WhiteBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB731F012AE56A54007ACB9F /* WhiteBackground.swift */; };
 		AB731F042AE56A78007ACB9F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB731F032AE56A78007ACB9F /* CustomButton.swift */; };
@@ -124,11 +128,15 @@
 		AB05EB2E2AE47657009C861C /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		AB31A8822AFAA42900D14F62 /* NewLocationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationScreen.swift; sourceTree = "<group>"; };
 		AB31A8832AFAA42900D14F62 /* ConfirmDeleteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteScreen.swift; sourceTree = "<group>"; };
+		AB31A8862AFAA50700D14F62 /* ArrangeMeetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangeMeetupView.swift; sourceTree = "<group>"; };
 		AB59A2392AF931CC004B7FE5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		AB59A23C2AF941EC004B7FE5 /* Mulish-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Medium.ttf"; sourceTree = "<group>"; };
 		AB59A23D2AF941EC004B7FE5 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		AB59A23E2AF941EC004B7FE5 /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		AB59A23F2AF941EC004B7FE5 /* Mulish-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-SemiBold.ttf"; sourceTree = "<group>"; };
+		AB6F6B842AFAD5EF004E0DAE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AB6F6B852AFAD5EF004E0DAE /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		AB6F6B862AFAD5EF004E0DAE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		AB731EFE2AE56906007ACB9F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		AB731F012AE56A54007ACB9F /* WhiteBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBackground.swift; sourceTree = "<group>"; };
 		AB731F032AE56A78007ACB9F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		AB05EAFA2AE4632A009C861C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AB6F6B832AFAD5D9004E0DAE /* Roboto */,
 				AB05EB172AE464EB009C861C /* Inter */,
 				AB05EAFB2AE46334009C861C /* Manuale */,
 				AB59A23B2AF941C7004B7FE5 /* Mulish */,
@@ -266,6 +275,16 @@
 			path = Mulish;
 			sourceTree = "<group>";
 		};
+		AB6F6B832AFAD5D9004E0DAE /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F6B852AFAD5EF004E0DAE /* Roboto-Bold.ttf */,
+				AB6F6B862AFAD5EF004E0DAE /* Roboto-Medium.ttf */,
+				AB6F6B842AFAD5EF004E0DAE /* Roboto-Regular.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
 		AB731F002AE56A33007ACB9F /* Other Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +322,8 @@
 		AB7E564C2AEE67A900B94AB0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				188C352F2AF6DF3400904BDA /* LocationScreens */,
 				AB7E564D2AEE6AD700B94AB0 /* TabbarView.swift */,
+				188C352F2AF6DF3400904BDA /* LocationScreens */,
 				AB7E564F2AEE6ADA00B94AB0 /* Home */,
 				AB7E56502AEE6AE100B94AB0 /* Messages */,
 				AB7E56512AEE6AE700B94AB0 /* Cards */,
@@ -336,6 +355,7 @@
 				AB7E56562AEE6B1000B94AB0 /* MessagesView.swift */,
 				AB59A2392AF931CC004B7FE5 /* ChatView.swift */,
 				AB8F1C6F2AFA92F2007E3C9A /* ChatOptionsView.swift */,
+				AB31A8862AFAA50700D14F62 /* ArrangeMeetupView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -540,6 +560,8 @@
 				AB05EB122AE46334009C861C /* Manuale-ExtraBold.ttf in Resources */,
 				AB731F182AE598AD007ACB9F /* fontsme.com.url in Resources */,
 				AB05EB212AE46505009C861C /* Inter-ExtraBold.ttf in Resources */,
+				AB6F6B882AFAD5EF004E0DAE /* Roboto-Bold.ttf in Resources */,
+				AB6F6B892AFAD5EF004E0DAE /* Roboto-Medium.ttf in Resources */,
 				AB05EB132AE46334009C861C /* Manuale-Medium.ttf in Resources */,
 				AB05EB082AE46334009C861C /* Manuale-LightItalic.ttf in Resources */,
 				AB05EB112AE46334009C861C /* Manuale-SemiBoldItalic.ttf in Resources */,
@@ -547,6 +569,7 @@
 				AB05EB282AE46505009C861C /* Inter-Black.ttf in Resources */,
 				AB731F172AE598AD007ACB9F /* Sk-Modernist-Mono.otf in Resources */,
 				AB731F1B2AE598AD007ACB9F /* Sk-Modernist-Regular.otf in Resources */,
+				AB6F6B872AFAD5EF004E0DAE /* Roboto-Regular.ttf in Resources */,
 				AB05EB232AE46505009C861C /* Inter-ExtraLight.ttf in Resources */,
 				AB05EB252AE46505009C861C /* Inter-SemiBold.ttf in Resources */,
 				AB974ABB2AE3159D004BC717 /* Preview Assets.xcassets in Resources */,
@@ -589,6 +612,7 @@
 				AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */,
 				AB974ACE2AE31A02004BC717 /* WelcomeView.swift in Sources */,
 				ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */,
+				AB31A8872AFAA50700D14F62 /* ArrangeMeetupView.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
 				ABAF0A1C2AF6DD6200ED358A /* ExploreView.swift in Sources */,
 				ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */,
