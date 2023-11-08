@@ -11,6 +11,9 @@
 		188C35372AF81B6500904BDA /* EmergencyContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */; };
 		188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35382AF82B7800904BDA /* ConfirmSafety.swift */; };
 		188C353B2AF9777100904BDA /* CheckInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C353A2AF9777100904BDA /* CheckInScreen.swift */; };
+		188C35432AFAD47300904BDA /* DecidePlaceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35422AFAD47300904BDA /* DecidePlaceScreen.swift */; };
+		188C35452AFAD48C00904BDA /* ConfirmChatdeleteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35442AFAD48C00904BDA /* ConfirmChatdeleteScreen.swift */; };
+		188C35472AFAD4D100904BDA /* FollowerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35462AFAD4D100904BDA /* FollowerScreen.swift */; };
 		AB05EAF82AE462F2009C861C /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB05EAF72AE462F2009C861C /* LandingView.swift */; };
 		AB05EB082AE46334009C861C /* Manuale-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */; };
 		AB05EB092AE46334009C861C /* Manuale-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */; };
@@ -89,6 +92,9 @@
 		188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactScreen.swift; sourceTree = "<group>"; };
 		188C35382AF82B7800904BDA /* ConfirmSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSafety.swift; sourceTree = "<group>"; };
 		188C353A2AF9777100904BDA /* CheckInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInScreen.swift; sourceTree = "<group>"; };
+		188C35422AFAD47300904BDA /* DecidePlaceScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecidePlaceScreen.swift; sourceTree = "<group>"; };
+		188C35442AFAD48C00904BDA /* ConfirmChatdeleteScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmChatdeleteScreen.swift; sourceTree = "<group>"; };
+		188C35462AFAD4D100904BDA /* FollowerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerScreen.swift; sourceTree = "<group>"; };
 		AB05EAF72AE462F2009C861C /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		AB05EAFC2AE46334009C861C /* Manuale-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-LightItalic.ttf"; sourceTree = "<group>"; };
 		AB05EAFD2AE46334009C861C /* Manuale-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manuale-Italic.ttf"; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 				ABAF0A142AF5B00000ED358A /* AddFilterView.swift */,
 				ABAF0A172AF699D500ED358A /* FilterView.swift */,
 				ABAF0A1B2AF6DD6200ED358A /* ExploreView.swift */,
+				188C35462AFAD4D100904BDA /* FollowerScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -324,6 +331,8 @@
 		AB7E56502AEE6AE100B94AB0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				188C35442AFAD48C00904BDA /* ConfirmChatdeleteScreen.swift */,
+				188C35422AFAD47300904BDA /* DecidePlaceScreen.swift */,
 				AB7E56562AEE6B1000B94AB0 /* MessagesView.swift */,
 				AB59A2392AF931CC004B7FE5 /* ChatView.swift */,
 				AB8F1C6F2AFA92F2007E3C9A /* ChatOptionsView.swift */,
@@ -586,6 +595,7 @@
 				AB7E56632AEE7B6F00B94AB0 /* StoryView.swift in Sources */,
 				AB731F102AE59634007ACB9F /* KeyboardView.swift in Sources */,
 				AB731F022AE56A54007ACB9F /* WhiteBackground.swift in Sources */,
+				188C35472AFAD4D100904BDA /* FollowerScreen.swift in Sources */,
 				188C353B2AF9777100904BDA /* CheckInScreen.swift in Sources */,
 				AB974ACA2AE3187F004BC717 /* SplashView.swift in Sources */,
 				AB05EB2B2AE46C3C009C861C /* SelectLoginView.swift in Sources */,
@@ -596,10 +606,12 @@
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
 				AB59A23A2AF931CC004B7FE5 /* ChatView.swift in Sources */,
 				AB31A8852AFAA42900D14F62 /* NewLocationScreen.swift in Sources */,
+				188C35452AFAD48C00904BDA /* ConfirmChatdeleteScreen.swift in Sources */,
 				188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */,
 				ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */,
 				AB7E564E2AEE6AD700B94AB0 /* TabbarView.swift in Sources */,
 				AB31A8842AFAA42900D14F62 /* ConfirmDeleteScreen.swift in Sources */,
+				188C35432AFAD47300904BDA /* DecidePlaceScreen.swift in Sources */,
 				AB7E56592AEE6B2400B94AB0 /* CardsView.swift in Sources */,
 				ABAF0A152AF5B00000ED358A /* AddFilterView.swift in Sources */,
 				188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */,
