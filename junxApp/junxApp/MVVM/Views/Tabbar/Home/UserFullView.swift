@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FollowerScreen: View {
+struct UserFullView: View {
     @State var geometry: GeometryProxy
     var body: some View {
         ZStack{
@@ -75,7 +75,7 @@ struct FollowerScreen: View {
 
 #Preview {
     GeometryReader{ gr in
-        FollowerScreen(geometry: gr)
+        UserFullView(geometry: gr)
     }
     
 }

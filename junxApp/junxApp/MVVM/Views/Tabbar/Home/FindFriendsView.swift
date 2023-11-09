@@ -1,5 +1,5 @@
 //
-//  ExploreView.swift
+//  FindFriendsView.swift
 //  junxApp
 //
 //  Created by Hamza Hashmi on 05/11/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExploreView: View {
+struct FindFriendsView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var homeVM: HomeViewModel
@@ -150,5 +150,5 @@ struct ExploreView: View {
 }
 
 #Preview {
-    ExploreView(homeVM: HomeViewModel())
+    FindFriendsView(homeVM: HomeViewModel())
 }

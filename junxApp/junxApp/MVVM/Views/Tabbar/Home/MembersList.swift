@@ -55,10 +55,10 @@ struct MembersList: View {
         })
         .toolbarTitleDisplayMode(.inline)
         .sheet(isPresented: $viewModel.isPresentExplore, content: {
-            ExploreView(homeVM: viewModel)
+            FindFriendsView(homeVM: viewModel)
         })
         .sheet(isPresented: $viewModel.isPresentAddFilter, content: {
-            AddFilterView(homeVM: viewModel)
+            AddFilterBottomSheet(homeVM: viewModel)
         })
         
     }

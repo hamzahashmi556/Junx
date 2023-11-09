@@ -1,5 +1,5 @@
 //
-//  AddFilterView.swift
+//  AddFilterBottomSheet.swift
 //  junxApp
 //
 //  Created by Hamza Hashmi on 04/11/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddFilterView: View {
+struct AddFilterBottomSheet: View {
     
     @ObservedObject var homeVM: HomeViewModel
     
@@ -52,5 +52,5 @@ struct AddFilterView: View {
 }
 
 #Preview {
-    AddFilterView(homeVM: HomeViewModel())
+    AddFilterBottomSheet(homeVM: HomeViewModel())
 }
