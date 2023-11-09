@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatView: View {
+struct DMView: View {
     
     @Environment(\.dismiss) var dismiss
 
@@ -64,7 +64,7 @@ struct ChatView: View {
             }
             
             if showMessages {
-                ChatOptionsView()
+                DMOptionsView()
             }
             
         }
@@ -157,6 +157,6 @@ struct ChatView: View {
 
 #Preview {
     NavigationView {
-        ChatView()
+        DMView()
     }
 }

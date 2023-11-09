@@ -1,5 +1,5 @@
 //
-//  ConfirmDeleteScreen.swift
+//  DeleteChatView.swift
 //  junxApp
 //
 //  Created by apple on 07/11/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConfirmDeleteChatScreen: View {
+struct DeleteChatView: View {
     @State var geometry: GeometryProxy
     var body: some View {
         ZStack{
@@ -47,7 +47,7 @@ struct ConfirmDeleteChatScreen: View {
 
 #Preview {
     GeometryReader { gr in
-        ConfirmDeleteChatScreen(geometry: gr)
+        DeleteChatView(geometry: gr)
     }
    
 }

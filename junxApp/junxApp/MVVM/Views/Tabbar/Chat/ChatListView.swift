@@ -1,5 +1,5 @@
 //
-//  MessagesView.swift
+//  ChatListView.swift
 //  junxApp
 //
 //  Created by Hamza Hashmi on 29/10/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MessagesView: View {
+struct ChatListView: View {
     
     @State var searchText = ""
     @State var isSearching = false
@@ -125,40 +125,6 @@ struct MessagesView: View {
     // MARK: Message -
 }
 
-struct SearchBar: View {
-    
-    @Binding var text: String
-    @Binding var isSearching: Bool
-
-    var body: some View {
-        
-        HStack {
-            
-            Image("search")
-                .padding()
-            
-            TextField("Search", text: $text)
-            
-            Button(action: {
-                text = ""
-                isSearching = false
-            }) {
-                Image(systemName: "xmark.circle.fill")
-                    .foregroundColor(.gray)
-            }
-            .padding(8)
-            .opacity(text.isEmpty ? 0 : 1)
-        }
-        .background {
-            RoundedRectangle(cornerRadius: 15)
-                .stroke()
-                .foregroundStyle(.tfBorder)
-        }
-        .padding(10)
-        
-    }
-}
-
 struct CircularImageView: View {
     
     @State var showBorder: Bool = true
@@ -187,6 +153,6 @@ struct CircularImageView: View {
 
 #Preview {
     NavigationView {
-        MessagesView()
+        ChatListView()
     }
 }

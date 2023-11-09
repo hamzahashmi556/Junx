@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatOptionsView: View {
+struct DMOptionsView: View {
     
     private var width = UIScreen.main.bounds.width - 60
     
@@ -75,7 +75,7 @@ struct ChatOptionsView: View {
 
 #Preview {
     NavigationView {
-        ChatOptionsView()
+        DMOptionsView()
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "line.3.horizontal")
