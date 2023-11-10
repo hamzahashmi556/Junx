@@ -12,24 +12,23 @@ struct TabbarView: View {
     
     @ObservedObject var homeVM: HomeViewModel
     
-    @State var index = 3
+    @State var index = 0
     
     var body: some View {
-        
         TabView(selection: $index) {
             NavigationStack {
                 HomeView(viewModel: homeVM)
             }
             .tag(0)
             .tabItem {
-                Image(index == 0 ? .homeSelected : .homeUnselected)
+                Label("", image: index == 0 ? .homeSelected : .homeUnselected)
             }
             NavigationStack {
                 ChatListView()
             }
             .tag(1)
             .tabItem {
-                Image(index == 1 ? .chatSelected : .chatUnselected)
+                Label("", image: index == 1 ? .chatSelected : .chatUnselected)
             }
             
             NavigationStack {
@@ -37,25 +36,24 @@ struct TabbarView: View {
             }
             .tag(2)
             .tabItem {
-                Image(index == 2 ? .compassSelected : .compassUnselected)
+                Label("", image: index == 2 ? .compassSelected : .compassUnselected)
             }
-
+            
             NavigationStack {
                 ExploreScreen()
             }
             .tag(3)
             .tabItem {
-                Image(index == 3 ? .searchSelected : .searchUnselected)
+                Label("", image: index == 3 ? .searchSelected : .searchUnselected)
             }
-
+            
             NavigationStack {
                 ProfileView()
             }
             .tag(4)
             .tabItem {
-                Image(index == 4 ? .profileSelected : .profileUnselected)
+                Label("", image: index == 4 ? .profileSelected : .profileUnselected)
             }
-
         }
         .preferredColorScheme(.light)
     }

@@ -13,7 +13,9 @@ struct HomeView: View {
     
     var body: some View {
         ZStack{
+            
             WhiteBackground()
+            
             ScrollView {
                 
                 VStack(spacing: 0) {
@@ -56,7 +58,7 @@ struct HomeView: View {
         HStack {
             Image("location")
             
-            Text("Rawalpindi, Pakistan")
+            Text("Houston, Texas")
                 .font(.system(size: 14))
                 .foregroundStyle(.textSecondary)
         }

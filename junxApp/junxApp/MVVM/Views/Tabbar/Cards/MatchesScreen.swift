@@ -11,19 +11,19 @@ struct MatchesScreen: View {
     @State var geometry: GeometryProxy
     var body: some View {
         
-        GeometryReader { gr in 
+        GeometryReader { gr in
             ZStack{
                 WhiteBackground()
                 VStack{
-                                            HStack{
-                    
-                                                Image("Back")
-                                                    .padding(.leading,30)
-                                                Spacer()
-                                                Image("text+image logo")
-                                                    .padding(.trailing,50)
-                                                Spacer()
-                                            }
+                    HStack{
+                        
+                        Image("Back")
+                            .padding(.leading,30)
+                        Spacer()
+                        Image("text+image logo")
+                            .padding(.trailing,50)
+                        Spacer()
+                    }
                     Spacer()
                     VStack{
                         ZStack{
@@ -56,7 +56,7 @@ struct MatchesScreen: View {
                             .font(.customFont(name: .inter, type: .semiBold, size: 14))
                             .multilineTextAlignment(.center)
                             .foregroundStyle(.textSecondary)
-                        .padding(.top,5)
+                            .padding(.top,5)
                         Spacer()
                     }.padding(.horizontal,15)
                     
@@ -69,10 +69,10 @@ struct MatchesScreen: View {
                         
                     }).padding(.top,5)
                     
-                   
+                    
                 }
             }
-           
+            
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -91,5 +91,5 @@ struct MatchesScreen: View {
         gr in
         MatchesScreen(geometry: gr)
     }
-   
+    
 }

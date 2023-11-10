@@ -13,7 +13,7 @@ struct AddFilterBottomSheet: View {
     
     var body: some View {
         ZStack{
-            WhiteBackground()
+//            WhiteBackground()
             VStack(spacing: 0) {
                 
                 HStack {
@@ -48,13 +48,14 @@ struct AddFilterBottomSheet: View {
                 }
             }
             
-            .presentationDetents([.medium])
-            .presentationDragIndicator(.visible)
         }
-      
+        .presentationDragIndicator(.visible)
+        .presentationCornerRadius(24)
+        .presentationDetents([.medium])
+        .presentationBackground(.cardBg2)
     }
 }
 
 #Preview {
-    AddFilterBottomSheet(homeVM: HomeViewModel())
+    MembersList(viewModel: HomeViewModel(), title: "New Memberrs")
 }

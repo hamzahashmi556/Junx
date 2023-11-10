@@ -61,6 +61,10 @@ struct MembersList: View {
             .sheet(isPresented: $viewModel.isPresentAddFilter, content: {
                 AddFilterBottomSheet(homeVM: viewModel)
             })
+            
+            if viewModel.isPresentAddFilter {
+                Color.black.opacity(0.5).ignoresSafeArea()
+            }
         }
        
         
