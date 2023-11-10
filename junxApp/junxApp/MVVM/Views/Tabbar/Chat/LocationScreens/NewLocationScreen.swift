@@ -55,7 +55,7 @@ struct NewLocationScreen: View {
                                     .foregroundStyle(.textSecondary)
                             VStack{
                                 HStack {
-                                    CustomButtonLightGreen(title: "Premium to Change Location", width: 218, action: {
+                                    CustomButtonLightGreen(title: "Premium to Change Location", width: 218, fontType: .regular, size: 14, action: {
                                         
                                     })
                                     

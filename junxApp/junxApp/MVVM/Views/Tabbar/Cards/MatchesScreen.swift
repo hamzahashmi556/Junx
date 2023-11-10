@@ -65,7 +65,7 @@ struct MatchesScreen: View {
                         
                     })
                     
-                    CustomButtonLightGreenBold(title: "Keep Swiping", width: geometry.size.width - 60, action: {
+                    CustomButtonLightGreen(title: "Keep Swiping", width: geometry.size.width - 60, fontType: .bold, size: 16, action: {
                         
                     }).padding(.top,5)
                     

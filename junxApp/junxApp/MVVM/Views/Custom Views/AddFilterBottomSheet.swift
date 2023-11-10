@@ -18,6 +18,8 @@ struct AddFilterBottomSheet: View {
                 
                 HStack {
                     
+//                    Spacer()
+                    
                     Text("Add Filters For Better Experience")
                         .font(.customFont(name: .manuale, type: .regular, size: 20))
                     

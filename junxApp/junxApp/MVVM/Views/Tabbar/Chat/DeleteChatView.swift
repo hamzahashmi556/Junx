@@ -36,7 +36,7 @@ struct DeleteChatView: View {
                 })
                 .padding(.bottom,5)
                
-                CustomButtonLightGreenBold(title: "Cancel", width: geometry.size.width - 60, action: {
+                CustomButtonLightGreen(title: "Cancel", width: geometry.size.width - 60, fontType: .bold, size: 16, action: {
                     
                 })
                
