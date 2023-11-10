@@ -17,7 +17,7 @@ class HomeViewModel: ObservableObject {
         .init(id: 4, name: "Lara Croft", description: "Lorem Ipsum Dolor Ismit", image: .sample4)
     ]
     
-    @Published var isPresentAddFilter = false
+    @Published var isPresentAddFilter = true
     @Published var isFilterApplied = false
     @Published var isPresentFilterView = false
     @Published var isPresentExplore = false

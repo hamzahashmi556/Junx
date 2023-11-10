@@ -16,50 +16,53 @@ struct MembersList: View {
     @State var title: String
     
     var body: some View {
-        
-        ScrollView {
-            
-            if viewModel.isFilterApplied {
-                HStack {
-                    filterView(image: .filterGender, isSelected: viewModel.filterType == .gender)
-                    
-                    filterView(image: .filterLocation, isSelected: viewModel.filterType == .location)
+        ZStack{
+            WhiteBackground()
+            ScrollView {
+                
+                if viewModel.isFilterApplied {
+                    HStack {
+                        filterView(image: .filterGender, isSelected: viewModel.filterType == .gender)
+                        
+                        filterView(image: .filterLocation, isSelected: viewModel.filterType == .location)
 
-                    filterView(image: .filterDistance, isSelected: viewModel.filterType == .distance)
+                        filterView(image: .filterDistance, isSelected: viewModel.filterType == .distance)
+                    }
                 }
+                else {
+                    TitleView()
+                }
+                
+                LazyVGrid(columns: [.init(), .init()], content: {
+                    ForEach(0 ..< viewModel.users.count, id: \.self) { id in
+                        MemberColoumn(user: viewModel.users[id])
+                    }
+                })
+                .padding(.horizontal, 20)
+                .padding(.top, 26)
             }
-            else {
-                TitleView()
-            }
-            
-            LazyVGrid(columns: [.init(), .init()], content: {
-                ForEach(0 ..< viewModel.users.count, id: \.self) { id in
-                    MemberColoumn(user: viewModel.users[id])
+            .navigationBarBackButtonHidden()
+            .toolbar(content: {
+                ToolbarItem(placement: .principal) {
+                    Image("text+image logo")
+                }
+                
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(systemName: "chevron.left")
+                        .onTapGesture {
+                            self.dismiss.callAsFunction()
+                        }
                 }
             })
-            .padding(.horizontal, 20)
-            .padding(.top, 26)
+            .toolbarTitleDisplayMode(.inline)
+            .sheet(isPresented: $viewModel.isPresentExplore, content: {
+                FindFriendsView(homeVM: viewModel)
+            })
+            .sheet(isPresented: $viewModel.isPresentAddFilter, content: {
+                AddFilterBottomSheet(homeVM: viewModel)
+            })
         }
-        .navigationBarBackButtonHidden()
-        .toolbar(content: {
-            ToolbarItem(placement: .principal) {
-                Image("text+image logo")
-            }
-            
-            ToolbarItem(placement: .topBarLeading) {
-                Image(systemName: "chevron.left")
-                    .onTapGesture {
-                        self.dismiss.callAsFunction()
-                    }
-            }
-        })
-        .toolbarTitleDisplayMode(.inline)
-        .sheet(isPresented: $viewModel.isPresentExplore, content: {
-            FindFriendsView(homeVM: viewModel)
-        })
-        .sheet(isPresented: $viewModel.isPresentAddFilter, content: {
-            AddFilterBottomSheet(homeVM: viewModel)
-        })
+       
         
     }
     
