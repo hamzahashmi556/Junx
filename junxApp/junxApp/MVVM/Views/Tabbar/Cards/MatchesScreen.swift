@@ -15,6 +15,15 @@ struct MatchesScreen: View {
             ZStack{
                 WhiteBackground()
                 VStack{
+                                            HStack{
+                    
+                                                Image("Back")
+                                                    .padding(.leading,30)
+                                                Spacer()
+                                                Image("text+image logo")
+                                                    .padding(.trailing,50)
+                                                Spacer()
+                                            }
                     Spacer()
                     VStack{
                         ZStack{
@@ -31,20 +40,26 @@ struct MatchesScreen: View {
                                     .offset(x:-4,y:60)
                             }
                             Image("Group 1171275857")
-                                .offset(y:20)
+                                .offset(y:30)
                             Image("icon p")
+                                .offset(x:-15,y:-10)
                         }
                     }
-                    Spacer()
+                    
                     Text("It’s a match!")
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                         .foregroundStyle(.textMain)
                     
-                    Text("Don’t waste more time! Just start a conversation with each other....")
-                        .font(.customFont(name: .inter, type: .regular, size: 14))
-                        .multilineTextAlignment(.center)
-                        .foregroundStyle(.textSecondary)
+                    HStack {
+                        Spacer()
+                        Text("Don’t waste more time! Just start a conversation with each other....")
+                            .font(.customFont(name: .inter, type: .semiBold, size: 14))
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.textSecondary)
                         .padding(.top,5)
+                        Spacer()
+                    }.padding(.horizontal,15)
+                    
                     Spacer()
                     CustomButton(title: "Say Hello", width: geometry.size.width - 60, action: {
                         

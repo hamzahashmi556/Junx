@@ -41,7 +41,7 @@ struct TabbarView: View {
             }
 
             NavigationStack {
-                SearchView()
+                ExploreScreen()
             }
             .tag(3)
             .tabItem {

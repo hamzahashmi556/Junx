@@ -108,7 +108,7 @@ struct CustomButtonLightGreenBold: View {
                 .clipShape(RoundedRectangle(cornerRadius: 32))
                 
                 Text(title)
-                    .font(.customFont(name: .inter, type: .bold, size: 14))
+                    .font(.customFont(name: .inter, type: .bold, size: 16))
                 
             }
             .foregroundStyle(.white)

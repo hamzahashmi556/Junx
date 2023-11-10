@@ -30,10 +30,11 @@ struct DeleteChatView: View {
                     .foregroundStyle(Color("70-black"))
                     .padding(.vertical,5)
                 Spacer()
-                CustomButton(title: "Continue", width: geometry.size.width - 60, action: {
+               
+                CustomButton(title: "Delete", width: geometry.size.width - 60, action: {
                     
                 })
-                .padding(.bottom)
+                .padding(.bottom,5)
                
                 CustomButtonLightGreenBold(title: "Cancel", width: geometry.size.width - 60, action: {
                     
