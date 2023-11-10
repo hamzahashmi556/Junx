@@ -12,41 +12,44 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        
-        ScrollView {
-            
-            VStack(spacing: 0) {
+        ZStack{
+            WhiteBackground()
+            ScrollView {
                 
-                TitleView()
-                
-                StoryListView()
-                
-                NearYouView(width: Constants.size.width - 40)
-                
-                NewMembersView()
-                
-                Spacer()
-                
-            }
-        }
-        .toolbar(.visible, for: .navigationBar)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Image(.menu)
-            }
-            
-            ToolbarItem(placement: .principal) {
-                Image("text+image logo")
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-                HStack {
-                    Image(.heart)
-                    Image(.notification)
+                VStack(spacing: 0) {
+                    
+                    TitleView()
+                    
+                    StoryListView()
+                    
+                    NearYouView(width: Constants.size.width - 40)
+                    
+                    NewMembersView()
+                    
+                    Spacer()
+                    
                 }
             }
+            .toolbar(.visible, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(.menu)
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Image("text+image logo")
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    HStack {
+                        Image(.heart)
+                        Image(.notification)
+                    }
+                }
+            }
+            .toolbarTitleDisplayMode(.inline)
         }
-        .toolbarTitleDisplayMode(.inline)
+    
     }
     
     func TitleView() -> some View {

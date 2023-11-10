@@ -17,35 +17,39 @@ struct ExploreMembersView: View {
     @State var isSearching = false
     
     var body: some View {
-        VStack {
-            
-            SearchBar(text: $searchedText, isSearching: $isSearching)
-                .padding(.horizontal, 40)
-            
-            Text("Let’s Explore Our Community!")
-                .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-            
-            ScrollView {
-                LazyVGrid(columns: [.init(), .init(), .init()], content: {
-                    
-                    ForEach(0 ... 15, id: \.self) { id in
-                        let index = id % homeVM.users.count
-                        UserView(user: homeVM.users[index])
-                    }
-                })
+        ZStack{
+            WhiteBackground()
+            VStack {
+                
+                SearchBar(text: $searchedText, isSearching: $isSearching)
+                    .padding(.horizontal, 40)
+                
+                Text("Let’s Explore Our Community!")
+                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                
+                ScrollView {
+                    LazyVGrid(columns: [.init(), .init(), .init()], content: {
+                        
+                        ForEach(0 ... 15, id: \.self) { id in
+                            let index = id % homeVM.users.count
+                            UserView(user: homeVM.users[index])
+                        }
+                    })
+                }
             }
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image(systemName: "arrow.left")
+                        .onTapGesture(perform: dismiss.callAsFunction)
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Image("text+image logo")
+                }
+            })
+            .toolbarTitleDisplayMode(.inline)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarLeading) {
-                Image(systemName: "arrow.left")
-                    .onTapGesture(perform: dismiss.callAsFunction)
-            }
-            
-            ToolbarItem(placement: .principal) {
-                Image("text+image logo")
-            }
-        })
-        .toolbarTitleDisplayMode(.inline)
+       
     }
     
     func UserView(user: AppUser) -> some View {

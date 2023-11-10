@@ -28,13 +28,14 @@ struct NewLocationScreen: View {
             
             
             
+
             tintBackground()
            
             
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color.white)
+                .foregroundStyle(Color("card-bg-2"))
                 .frame(width: geometry.size.width - 60,height: geometry.size.height * 0.35)
-                .foregroundColor(Color.white)
+               
                 .overlay(
                     VStack(spacing: 0) {
                         

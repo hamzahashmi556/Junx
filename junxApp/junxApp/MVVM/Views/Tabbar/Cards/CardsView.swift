@@ -16,62 +16,66 @@ struct CardsView: View {
     }
     
     var body: some View {
-        
-        GeometryReader { reader in
-            VStack {
+        ZStack{
+            WhiteBackground()
+            GeometryReader { reader in
                 
-                Text("Lets Explore!")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                
-                HStack(alignment: .bottom) {
+                VStack {
                     
-                    Spacer()
+                    Text("Lets Explore!")
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                     
-                    ZStack(alignment: .top) {
+                    HStack(alignment: .bottom) {
                         
-                        ForEach(homeVM.users, id: \.id) { user in
-                            if (self.maxID - 3)...self.maxID ~= user.id {
-                                CardView(user: user) { removedUser in
-                                    // Remove that user from our array
-                                    self.homeVM.users.removeAll(where: { $0.id == removedUser.id })
+                        Spacer()
+                        
+                        ZStack(alignment: .top) {
+                            
+                            ForEach(homeVM.users, id: \.id) { user in
+                                if (self.maxID - 3)...self.maxID ~= user.id {
+                                    CardView(user: user) { removedUser in
+                                        // Remove that user from our array
+                                        self.homeVM.users.removeAll(where: { $0.id == removedUser.id })
+                                    }
+                                    .animation(.spring())
+                                    .frame(width: self.getCardWidth(reader, id: user.id), height: 490)
+                                    .offset(x: 0, y: self.getCardOffset(reader, id: user.id))
                                 }
-                                .animation(.spring())
-                                .frame(width: self.getCardWidth(reader, id: user.id), height: 490)
-                                .offset(x: 0, y: self.getCardOffset(reader, id: user.id))
                             }
-                        }
-                        /*
-                        ForEach(0 ..< homeVM.users.count, id: \.self) { id in
-                            
+                            /*
+                            ForEach(0 ..< homeVM.users.count, id: \.self) { id in
+                                
 
-                            
-                            let width = reader.size.width - 30
-                            let height: CGFloat = 508
-                            
-                            let isLastUser = id == homeVM.users.count - 1
-                            
-                            let newWidth = isLastUser ? width : width - 50
-                            let newHeight = isLastUser ? height - 20 : height
-                            
-                            CardView(width: newWidth, height: newHeight, user: homeVM.users[id])
+                                
+                                let width = reader.size.width - 30
+                                let height: CGFloat = 508
+                                
+                                let isLastUser = id == homeVM.users.count - 1
+                                
+                                let newWidth = isLastUser ? width : width - 50
+                                let newHeight = isLastUser ? height - 20 : height
+                                
+                                CardView(width: newWidth, height: newHeight, user: homeVM.users[id])
+                            }
+                             */
                         }
-                         */
+                        Spacer()
                     }
+                    
                     Spacer()
                 }
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("text+image logo")
+                }
                 
-                Spacer()
+                ToolbarItem(placement: .topBarTrailing) {
+                    Image("header")
+                }
             }
         }
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Image("text+image logo")
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-                Image("header")
-            }
-        }
+       
     }
     
     private func getCardWidth(_ geometry: GeometryProxy, id: Int) -> CGFloat {

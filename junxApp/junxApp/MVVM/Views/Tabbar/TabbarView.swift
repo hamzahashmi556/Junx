@@ -12,7 +12,7 @@ struct TabbarView: View {
     
     @ObservedObject var homeVM: HomeViewModel
     
-    @State var index = 0
+    @State var index = 3
     
     var body: some View {
         

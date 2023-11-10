@@ -18,7 +18,7 @@ struct DMView: View {
     var body: some View {
         
         ZStack {
-            
+            WhiteBackground()
             ScrollView(showsIndicators: false) {
                 
                 VStack {

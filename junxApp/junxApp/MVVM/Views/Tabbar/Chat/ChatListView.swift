@@ -13,28 +13,32 @@ struct ChatListView: View {
     @State var isSearching = false
     
     var body: some View {
-        ScrollView {
-            
-            SearchBar(text: $searchText, isSearching: $isSearching)
-                .frame(height: 48)
-                .padding(.horizontal, 40)
-                .padding(.top, 13)
-            
-            ActivitiesView()
-            
-            MessageList()
+        ZStack{
+            WhiteBackground()
+            ScrollView {
+                
+                SearchBar(text: $searchText, isSearching: $isSearching)
+                    .frame(height: 48)
+                    .padding(.horizontal, 40)
+                    .padding(.top, 13)
+                
+                ActivitiesView()
+                
+                MessageList()
+            }
+            .toolbar(content: {
+                ToolbarItem(placement: .principal) {
+                    Text("Messages")
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Image(systemName: "slider.horizontal.3")
+                }
+                
+            })
+            .toolbarTitleDisplayMode(.inline)
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .principal) {
-                Text("Messages")
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-                Image(systemName: "slider.horizontal.3")
-            }
-            
-        })
-        .toolbarTitleDisplayMode(.inline)
+       
     }
     
     

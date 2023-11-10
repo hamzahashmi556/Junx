@@ -15,86 +15,90 @@ struct ArrangeMeetupView: View {
     @State var weeks: [Week] = []
 
     var body: some View {
-        VStack {
-            
-            HStack {
-                Text("Lets Arrange a Hangout.")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                Spacer()
-            }
-            .padding(.top, 48)
-            
-            Spacer()
-            
-            HStack {
-                Text("Select Dates")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+        ZStack{
+            WhiteBackground()
+            VStack {
                 
-                Spacer()
-                
-                Image(systemName: "ellipsis")
-            }
-            
-            MonthView(weeks: weeks)
-            
-            
-            HStack {
-                ForEach(Calendar.current.veryShortWeekdaySymbols, id: \.self) { item in
-                    Text(item)
-                        .font(.customFont(name: .roboto, type: .regular, size: 14))
-                        .frame(maxWidth: .infinity)
-                        .textCase(.uppercase)
-                        .foregroundStyle(.black)
+                HStack {
+                    Text("Lets Arrange a Hangout.")
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    Spacer()
                 }
-            }
-            .padding(.top)
-            
-            HStack {
-                Text("Hangout Time")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                .padding(.top, 48)
                 
                 Spacer()
                 
-                Image(systemName: "ellipsis")
-            }
-            .padding(.top, 60)
-            
-            HStack {
-                ForEach(1 ... 5, id: \.self) { index in
-                    VStack(spacing: 10) {
-                        Text("\(index)")
-                            .font(.customFont(name: .roboto, type: .medium, size: 20))
-                        
-                        Text(index == 1 ? "Hour" : "Hours")
-                            .font(.customFont(name: .roboto, type: .regular, size: 12))
+                HStack {
+                    Text("Select Dates")
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    
+                    Spacer()
+                    
+                    Image(systemName: "ellipsis")
+                }
+                
+                MonthView(weeks: weeks)
+                
+                
+                HStack {
+                    ForEach(Calendar.current.veryShortWeekdaySymbols, id: \.self) { item in
+                        Text(item)
+                            .font(.customFont(name: .roboto, type: .regular, size: 14))
+                            .frame(maxWidth: .infinity)
+                            .textCase(.uppercase)
+                            .foregroundStyle(.black)
                     }
-                    .frame(maxWidth: .infinity)
                 }
-                .padding(.top, 25)
-            }
-            
-            Spacer()
-        }
-        .padding(.horizontal, 35)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Image("text+image logo")
-            }
-        }
-        .toolbarTitleDisplayMode(.inline)
-        .onAppear {
-            var weeks = [Week]()
-            for week in 0...4 {
-                var days = [Day]()
-                for day in 1...7 {
-                    var dayObject = Day(number: week * 7 + day)
-                    dayObject.isSelected = 3...6 ~= day && week == 3
-                    days.append(dayObject)
+                .padding(.top)
+                
+                HStack {
+                    Text("Hangout Time")
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    
+                    Spacer()
+                    
+                    Image(systemName: "ellipsis")
                 }
-                weeks.append(Week(days: days))
+                .padding(.top, 60)
+                
+                HStack {
+                    ForEach(1 ... 5, id: \.self) { index in
+                        VStack(spacing: 10) {
+                            Text("\(index)")
+                                .font(.customFont(name: .roboto, type: .medium, size: 20))
+                            
+                            Text(index == 1 ? "Hour" : "Hours")
+                                .font(.customFont(name: .roboto, type: .regular, size: 12))
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                    .padding(.top, 25)
+                }
+                
+                Spacer()
             }
-            self.weeks = weeks
+            .padding(.horizontal, 35)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("text+image logo")
+                }
+            }
+            .toolbarTitleDisplayMode(.inline)
+            .onAppear {
+                var weeks = [Week]()
+                for week in 0...4 {
+                    var days = [Day]()
+                    for day in 1...7 {
+                        var dayObject = Day(number: week * 7 + day)
+                        dayObject.isSelected = 3...6 ~= day && week == 3
+                        days.append(dayObject)
+                    }
+                    weeks.append(Week(days: days))
+                }
+                self.weeks = weeks
+            }
         }
+     
     }
 }
 
