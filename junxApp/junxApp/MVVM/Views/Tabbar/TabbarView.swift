@@ -40,7 +40,8 @@ struct TabbarView: View {
             }
             
             NavigationStack {
-                ExploreScreen()
+//                ExploreScreen()
+                ExploreMembersView(homeVM: homeVM)
             }
             .tag(3)
             .tabItem {

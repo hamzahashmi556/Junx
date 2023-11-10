@@ -18,7 +18,7 @@ struct AddFilterBottomSheet: View {
                 
                 HStack {
                     
-//                    Spacer()
+                    Spacer()
                     
                     Text("Add Filters For Better Experience")
                         .font(.customFont(name: .manuale, type: .regular, size: 20))
@@ -26,10 +26,11 @@ struct AddFilterBottomSheet: View {
                     Spacer()
                 }
                 .padding(.horizontal, 25)
+                .padding(.top, 12)
                 
                 Image(.hey)
                     .padding(.top, 11)
-                    .padding(.bottom, 7)
+                    .padding(.bottom, 11)
                 
                 Text("Enhance your Dating experience with our advanced filters! Find your perfect match by customizing your search criteria for age, location, and interests.\nFiltered explorations ")
                     .font(.customFont(name: .inter, type: .regular, size: 14))
@@ -43,17 +44,17 @@ struct AddFilterBottomSheet: View {
                         
                     })
                     
-                    CustomButton(title: "Cancel", width: Constants.size.width - 100, action: {
+                    CustomButtonLightGreen(title: "Cancel", width: Constants.size.width - 100, fontType: .bold, size: 16) {
                         
-                    })
-
+                    }
                 }
+                .padding(.top)
             }
             
         }
         .presentationDragIndicator(.visible)
         .presentationCornerRadius(24)
-        .presentationDetents([.medium])
+        .presentationDetents([.height(409)])
         .presentationBackground(.cardBg2)
     }
 }
