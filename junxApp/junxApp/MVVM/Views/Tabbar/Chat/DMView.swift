@@ -89,6 +89,7 @@ struct DMView: View {
                 HStack {
                     
                     Image(.searchNavigation)
+                        .offset(x:4)
 
                     Image(.menu)
                         .onTapGesture {

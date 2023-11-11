@@ -12,7 +12,11 @@ struct ExploreMembersView: View {
     @Environment(\.dismiss) var dismiss
     
     @ObservedObject var homeVM: HomeViewModel
-    
+    private let threeColumnGrid = [
+            GridItem(.flexible(), spacing: 0),
+            GridItem(.flexible(), spacing: 0),
+            GridItem(.flexible(), spacing: 0),
+        ]
     @State var searchedText = ""
     @State var isSearching = false
     
@@ -29,7 +33,7 @@ struct ExploreMembersView: View {
                     .foregroundStyle(.textMain)
                 
                 ScrollView {
-                    LazyVGrid(columns: [.init(), .init(), .init()], spacing: 0, content: {
+                    LazyVGrid(columns: threeColumnGrid, spacing: 0, content: {
                         
                         ForEach(0 ... 15, id: \.self) { id in
                             let index = id % homeVM.users.count
@@ -65,12 +69,16 @@ struct ExploreMembersView: View {
                 .scaledToFill()
                 .clipShape(RoundedRectangle(cornerRadius: 5))
             
-            VStack(alignment: .leading) {
+            VStack {
                 
                 Spacer()
                 
                 Text(user.name)
                     .font(.customFont(name: .manuale, type: .bold, size: 14))
+                    .lineLimit(1)
+                    .padding(.horizontal)
+                    .offset(y:10)
+                    
                 
                 HStack {
                     Image("eye")
@@ -79,6 +87,7 @@ struct ExploreMembersView: View {
                         .font(.customFont(name: .inter, type: .regular, size: 12))
                 }
                 .padding(.bottom, 5)
+                .padding(.horizontal)
             }
         }
         .frame(width: width, height: width)
