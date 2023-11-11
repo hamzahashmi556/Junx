@@ -18,8 +18,6 @@ struct AddFilterBottomSheet: View {
                 
                 HStack {
                     
-                    Spacer()
-                    
                     Text("Add Filters For Better Experience")
                         .font(.customFont(name: .manuale, type: .regular, size: 20))
                     
@@ -37,6 +35,7 @@ struct AddFilterBottomSheet: View {
                     .foregroundStyle(.textSecondary)
                     .padding(.horizontal, 25)
                     .padding(.bottom, 20)
+                    .multilineTextAlignment(.center)
                 
                 VStack(spacing: 15) {
                     
