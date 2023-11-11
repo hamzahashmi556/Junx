@@ -19,6 +19,7 @@ struct StoryListView: View {
                     StoryView(numberOfStories: self.stories[id], imageResource: self.images[id])
                 }
             }
+            .padding(.leading, 10)
             .padding(.vertical, 5)
         }
     }

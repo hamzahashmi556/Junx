@@ -19,7 +19,7 @@ struct ChatListView: View {
                 
                 SearchBar(text: $searchText, isSearching: $isSearching)
                     .frame(height: 48)
-                    .padding(.horizontal, 40)
+                    .padding(.horizontal, 30)
                     .padding(.top, 13)
                 
                 ActivitiesView()
@@ -27,6 +27,10 @@ struct ChatListView: View {
                 MessageList()
             }
             .toolbar(content: {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image("Back")
+                }
+                
                 ToolbarItem(placement: .principal) {
                     Text("Messages")
                 }
@@ -156,7 +160,8 @@ struct CircularImageView: View {
 }
 
 #Preview {
-    NavigationView {
-        ChatListView()
-    }
+//    NavigationView {
+//        ChatListView()
+//    }
+    TabbarView(homeVM: HomeViewModel(), index: 1)
 }

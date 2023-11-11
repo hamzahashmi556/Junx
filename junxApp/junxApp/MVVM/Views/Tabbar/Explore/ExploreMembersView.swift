@@ -26,9 +26,10 @@ struct ExploreMembersView: View {
                 
                 Text("Let’s Explore Our Community!")
                     .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    .foregroundStyle(.textMain)
                 
                 ScrollView {
-                    LazyVGrid(columns: [.init(), .init(), .init()], content: {
+                    LazyVGrid(columns: [.init(), .init(), .init()], spacing: 0, content: {
                         
                         ForEach(0 ... 15, id: \.self) { id in
                             let index = id % homeVM.users.count
@@ -87,7 +88,8 @@ struct ExploreMembersView: View {
 }
 
 #Preview {
-    NavigationView {
-        ExploreMembersView(homeVM: HomeViewModel())
-    }
+//    NavigationView {
+//        ExploreMembersView(homeVM: HomeViewModel())
+//    }
+    TabbarView(homeVM: HomeViewModel(), index: 3)
 }

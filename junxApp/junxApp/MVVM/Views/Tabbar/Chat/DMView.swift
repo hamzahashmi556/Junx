@@ -48,7 +48,8 @@ struct DMView: View {
                 Spacer()
                 
                 HStack {
-                    Image(systemName: "plus")
+                    
+                    Image(.plus)
                         .padding(.horizontal, 5)
                     
                     TextField("Enter Message", text: $newMessage)
@@ -56,6 +57,7 @@ struct DMView: View {
                         .padding(.leading)
                         .background(.tfBorder)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .foregroundStyle(.black)
                     
                     Image(systemName: "paperplane.fill")
                         .padding(.horizontal, 5)
@@ -71,7 +73,7 @@ struct DMView: View {
         .toolbar {
             
             ToolbarItem(placement: .cancellationAction) {
-                Image(systemName: "chevron.left")
+                Image(.backChevron)
                     .onTapGesture {
                         dismiss.callAsFunction()
                     }
@@ -86,9 +88,9 @@ struct DMView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 HStack {
                     
-                    Image(systemName: "magnifyingglass")
+                    Image(.searchNavigation)
 
-                    Image(systemName: "line.horizontal.3")
+                    Image(.menu)
                         .onTapGesture {
                             withAnimation {
                                 self.showMessages.toggle()

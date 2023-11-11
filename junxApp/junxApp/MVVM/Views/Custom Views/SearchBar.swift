@@ -16,7 +16,7 @@ struct SearchBar: View {
         
         HStack {
             
-            Image("search")
+            Image(.searchbar)
                 .padding()
             
             TextField("Search", text: $text)

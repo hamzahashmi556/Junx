@@ -84,5 +84,5 @@ struct ExploreScreen: View {
 }
 
 #Preview {
-    ExploreScreen()
+    TabbarView(homeVM: HomeViewModel(), index: 3)
 }

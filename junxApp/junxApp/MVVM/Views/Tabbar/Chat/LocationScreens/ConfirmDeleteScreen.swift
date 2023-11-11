@@ -58,7 +58,7 @@ struct ConfirmDeleteScreen: View {
                 }
                 .padding(.bottom, 10)
                 
-                CustomButtonLightGreenBold(title: "Cancel", width: geometry.size.width - 95) {
+                CustomButtonLightGreen(title: "Cancel", width: geometry.size.width - 95, fontType: .bold, size: 16) {
                     
                 }
                 .padding(.bottom, 30)

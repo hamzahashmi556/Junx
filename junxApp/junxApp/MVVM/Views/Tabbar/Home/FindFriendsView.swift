@@ -14,37 +14,46 @@ struct FindFriendsView: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
+        ZStack {
             
-            // Title
-            HStack {
-                Text("Find Friends")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                    .foregroundStyle(.textMain)
-            }
-            .padding(.top, 12)
+            WhiteBackground()
             
-            UserCardsView(width: Constants.size.width - 32)
-            
-            HStack(spacing: 40, content: {
+            VStack(spacing: 0) {
                 
-                Image(.heartGreenCircle)
-                    .shadow(color: .init(hexString: "B9DAFB"), radius: 10)
+                // Title
+                HStack(alignment: .bottom) {
+                    Text("Find Friends")
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                        .foregroundStyle(.textMain)
+                }
+                .padding(.top, 12)
+                .frame(height: 35)
                 
-                Image(.closeGreenCircle)
-                    .onTapGesture {
+                UserCardsView(width: Constants.size.width - 32)
+                
+                ZStack(alignment: .center) {
+                    
+                    Image(.heartGreenCircle)
+                        .offset(x: -65)
+                    
+                    Button(action: {
                         dismiss.callAsFunction()
-                    }
-            })
-            .padding(.top, 30)
-            
-            Text("Find friends nearby")
-                .font(.customFont(name: .inter, type: .regular, size: 14))
-                .foregroundStyle(.textSecondary)
-                .padding(.top, 17)
-            
-            Spacer()
+                    }, label: {
+                        Image(.closeGreenCircle)
+                    })
+                    .offset(x: 65, y: 7)
+                }
+                .frame(height: 115, alignment: .center)
+                .padding(.bottom)
+                
+                Text("Find friends nearby")
+                    .font(.customFont(name: .inter, type: .regular, size: 14))
+                    .foregroundStyle(.textSecondary)
+                    .padding(.top, 17)
+            }
         }
+        .presentationDetents([.height(Constants.size.height * 0.84)])
+        .presentationCornerRadius(30)
     }
     
     func UserCardsView(width: CGFloat) -> some View {
@@ -55,7 +64,7 @@ struct FindFriendsView: View {
                 ForEach(0 ..< homeVM.users.count, id: \.self) { id in
                     
                     let width = width - CGFloat(id * 16)
-                    let height = 465 - CGFloat((homeVM.users.count - id) * 21)
+                    let height = Constants.size.height * 0.5 - CGFloat((homeVM.users.count - id) * 21)
                     
                     HStack {
                         
@@ -142,13 +151,19 @@ struct FindFriendsView: View {
                     }
                 }
             }
-            .frame(width: width, height: 465, alignment: .center)
-            .padding(.top, 12)
-
+            .frame(width: width, height: Constants.size.height * 0.55, alignment: .center)
+            .padding(.vertical, 12)
         }
     }
 }
 
 #Preview {
-    FindFriendsView(homeVM: HomeViewModel())
+//    FindFriendsView(homeVM: HomeViewModel())
+    VStack {
+        HomeView(viewModel: HomeViewModel())
+            .opacity(0.8)
+            .sheet(isPresented: .constant(true), content: {
+                FindFriendsView(homeVM: HomeViewModel())
+            })
+    }
 }

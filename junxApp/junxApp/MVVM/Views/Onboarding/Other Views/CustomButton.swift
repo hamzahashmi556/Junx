@@ -63,7 +63,7 @@ struct CircleButton : View {
     }
 }
 
-
+// TODO: Make Dynamic Custom Buttons Instead of Making Each Button
 
 struct CustomButtonLightGreen: View {
     
@@ -71,32 +71,9 @@ struct CustomButtonLightGreen: View {
     
     @State var width: CGFloat
     
-    @State var action: () -> Void
+    @State var fontType: FontsType
     
-    var body: some View {
-        
-        Button(action: action) {
-            ZStack {
-               Color("button linear 2")
-                .clipShape(RoundedRectangle(cornerRadius: 32))
-                
-                Text(title)
-                    .font(.customFont(name: .inter, type: .light, size: 14))
-                
-            }
-            .foregroundStyle(.white)
-            .frame(width: width, height: width * 0.2)
-        }
-    }
-}
-
-
-
-struct CustomButtonLightGreenBold: View {
-    
-    @State var title: String
-    
-    @State var width: CGFloat
+    @State var size: CGFloat
     
     @State var action: () -> Void
     
@@ -108,34 +85,7 @@ struct CustomButtonLightGreenBold: View {
                 .clipShape(RoundedRectangle(cornerRadius: 32))
                 
                 Text(title)
-                    .font(.customFont(name: .inter, type: .bold, size: 16))
-                
-            }
-            .foregroundStyle(.white)
-            .frame(width: width, height: width * 0.2)
-        }
-    }
-}
-
-
-
-struct CustomBorderButton: View {
-    
-    @State var title: String
-    
-    @State var width: CGFloat
-    
-    @State var action: () -> Void
-    
-    var body: some View {
-        
-        Button(action: action) {
-            ZStack {
-               Color("button linear 2")
-                .clipShape(RoundedRectangle(cornerRadius: 32))
-                
-                Text(title)
-                    .font(.customFont(name: .inter, type: .light, size: 14))
+                    .font(.customFont(name: .inter, type: fontType, size: size))
                 
             }
             .foregroundStyle(.white)
@@ -146,7 +96,15 @@ struct CustomBorderButton: View {
 
 
 #Preview {
-    CustomButton(title: "Tester", width: 375, action: {
+    VStack {
+        CustomButton(title: "Custom Button", width: 375, action: {})
         
-    })
+        CircleButton(title: "Circle Button", width: 375, height: 50, action: {})
+        
+        CustomButtonLightGreen(title: "CustomButtonLightGreen", width: 375, fontType: .regular, size: 14, action: {})
+        
+        CustomButtonLightGreen(title: "CustomButtonLightGreenBold", width: 375, fontType: .bold, size: 16, action: {})
+        
+        CustomButtonLightGreen(title: "CustomBorderButton", width: 375, fontType: .light, size: 14, action: {})
+    }
 }
