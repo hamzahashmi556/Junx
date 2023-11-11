@@ -38,7 +38,7 @@ struct AddFilterBottomSheet: View {
                     .padding(.horizontal, 25)
                     .padding(.bottom, 20)
                 
-                VStack(spacing: 16) {
+                VStack(spacing: 15) {
                     
                     CustomButton(title: "Apply filter", width: Constants.size.width - 100, action: {
                         

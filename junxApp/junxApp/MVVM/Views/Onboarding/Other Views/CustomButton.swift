@@ -29,7 +29,7 @@ struct CustomButton: View {
                 
             }
             .foregroundStyle(.white)
-            .frame(width: width, height: width * 0.2)
+            .frame(width: width, height: 56)
         }
     }
 }
@@ -89,7 +89,7 @@ struct CustomButtonLightGreen: View {
                 
             }
             .foregroundStyle(.white)
-            .frame(width: width, height: width * 0.2)
+            .frame(width: width, height: 56)
         }
     }
 }

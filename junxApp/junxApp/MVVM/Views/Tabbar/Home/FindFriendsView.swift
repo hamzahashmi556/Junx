@@ -94,7 +94,7 @@ struct FindFriendsView: View {
                                         bottomTrailing: 25,
                                         topTrailing: 0)
                                     )
-                                    .foregroundStyle(.greenTheme)
+                                    .foregroundStyle(.greenTheme.opacity(0.65))
                                     .frame(height: 85, alignment: .bottom)
                                 }
                                 

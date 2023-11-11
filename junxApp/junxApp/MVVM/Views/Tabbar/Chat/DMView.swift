@@ -134,7 +134,7 @@ struct DMView: View {
     
     func imageView() -> some View {
         VStack(alignment: .leading) {
-            Image(.sample4)
+            Image(.imagePlaceholder)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 266, height: 150)
