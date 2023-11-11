@@ -14,7 +14,8 @@ struct FilterView: View {
     @ObservedObject var homeVM: HomeViewModel
     
     @State var age = 0.0
-    
+    @State var sliderPositionAge: ClosedRange<Int> = 3...28
+    @State var sliderPositionDistance: ClosedRange<Int> = 50...250
     @State var distance = 0.0
     
     @State var selectedGender = 0
@@ -31,7 +32,7 @@ struct FilterView: View {
                     Text("Add Filters By")
                         .foregroundStyle(.textMain)
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                        .padding(.top, 45)
+                        .padding(.top, 35)
                         .padding(.bottom, 18)
                     
                     BorderView(title: "Age", imageName: "chevron.down")
@@ -42,11 +43,12 @@ struct FilterView: View {
                             
                             Spacer()
                             
-                            Text("18-\(Int(age))")
+                            Text("\(Int(sliderPositionAge.lowerBound))-\(Int(sliderPositionAge.upperBound))")
                         }
                         .font(.customFont(name: .inter, type: .semiBold, size: 16))
+                        .padding(.bottom,10)
+                        RangedSliderView(value: $sliderPositionAge, bounds: 3...28)
                         
-                        Slider(value: $age, in: 18...25)
                     }
                     .padding(.horizontal, 60)
                     .padding(.top, 26)
@@ -56,21 +58,23 @@ struct FilterView: View {
                     
                     VStack {
                         HStack {
-                            Text("Distance")
+                            Text("Kilometers")
                             
                             Spacer()
                             
-                            Text("100-\(Int(distance))")
+                            Text("\(Int(sliderPositionDistance.lowerBound))-\(Int(sliderPositionDistance.upperBound))")
                         }
                         .font(.customFont(name: .inter, type: .semiBold, size: 16))
+                        .padding(.bottom,10)
                         
-                        Slider(value: $distance, in: 100...250)
+                        RangedSliderView(value: $sliderPositionDistance, bounds: 50...250)
                     }
                     .padding(.horizontal, 60)
                     .padding(.top, 26)
                     .padding(.bottom, 13)
                     
                     BorderView(title: "Sex", imageName: "chevron.down")
+                        .padding(.top,10)
                     
                     Picker(selection: $selectedGender) {
                         Text("Male").tag(0)
@@ -131,6 +135,91 @@ struct FilterView: View {
         .padding(.horizontal, 40)
     }
 }
+
+struct RangedSliderView: View {
+    let currentValue: Binding<ClosedRange<Int>>
+    let sliderBounds: ClosedRange<Int>
+    
+    public init(value: Binding<ClosedRange<Int>>, bounds: ClosedRange<Int>) {
+        self.currentValue = value
+        self.sliderBounds = bounds
+    }
+    
+    var body: some View {
+        GeometryReader { geometry in
+            sliderView(sliderSize: geometry.size)
+        }
+    }
+    
+    @ViewBuilder private func sliderView(sliderSize: CGSize) -> some View {
+        let sliderViewYCenter = sliderSize.height / 2
+        ZStack {
+            RoundedRectangle(cornerRadius: 2)
+                .fill(Color("sliderbg"))
+                .frame(height: 3)
+            ZStack {
+                let sliderBoundDifference = sliderBounds.upperBound - sliderBounds.lowerBound
+                let stepWidthInPixel = CGFloat(sliderSize.width) / CGFloat(sliderBoundDifference)
+                
+                // Calculate Left Thumb initial position
+                let leftThumbLocation: CGFloat = CGFloat(currentValue.wrappedValue.lowerBound - sliderBounds.lowerBound) * stepWidthInPixel
+                
+                // Calculate right thumb initial position
+                let rightThumbLocation = CGFloat(currentValue.wrappedValue.upperBound - sliderBounds.lowerBound) * stepWidthInPixel
+                
+                // Path between both handles
+                lineBetweenThumbs(from: .init(x: leftThumbLocation, y: sliderViewYCenter), to: .init(x: rightThumbLocation, y: sliderViewYCenter))
+                
+                // Left Thumb Handle
+                let leftThumbPoint = CGPoint(x: leftThumbLocation, y: sliderViewYCenter)
+                thumbView(position: leftThumbPoint, value: currentValue.wrappedValue.lowerBound)
+                    .highPriorityGesture(DragGesture().onChanged { dragValue in
+                        let dragLocation = dragValue.location
+                        let xThumbOffset = min(max(0, dragLocation.x), sliderSize.width)
+                        
+                        let newValue = Int(xThumbOffset / stepWidthInPixel) + sliderBounds.lowerBound
+                        
+                        // Stop the range thumbs from colliding each other
+                        if newValue < currentValue.wrappedValue.upperBound {
+                            currentValue.wrappedValue = newValue...currentValue.wrappedValue.upperBound
+                        }
+                    })
+                
+                // Right Thumb Handle
+                thumbView(position: CGPoint(x: rightThumbLocation, y: sliderViewYCenter), value: currentValue.wrappedValue.upperBound)
+                    .highPriorityGesture(DragGesture().onChanged { dragValue in
+                        let dragLocation = dragValue.location
+                        let xThumbOffset = min(max(leftThumbLocation, dragLocation.x), sliderSize.width)
+                        
+                        var newValue = Int(xThumbOffset / stepWidthInPixel) + sliderBounds.lowerBound
+                        
+                        // Stop the range thumbs from colliding each other
+                        if newValue > currentValue.wrappedValue.lowerBound {
+                            currentValue.wrappedValue = currentValue.wrappedValue.lowerBound...newValue
+                        }
+                    })
+            }
+        }
+    }
+    
+    @ViewBuilder func lineBetweenThumbs(from: CGPoint, to: CGPoint) -> some View {
+        Path { path in
+            path.move(to: from)
+            path.addLine(to: to)
+        }.stroke(.sliderline, lineWidth: 2)
+    }
+    
+    @ViewBuilder func thumbView(position: CGPoint, value: Int) -> some View {
+        ZStack {
+            Circle()
+                .frame(width: 20, height: 20)
+                .foregroundColor(.buttonLinear2)
+                .contentShape(Rectangle())
+        }
+        .position(x: position.x, y: position.y)
+    }
+}
+
 
 #Preview {
     FilterView(homeVM: HomeViewModel())
