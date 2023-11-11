@@ -36,7 +36,9 @@ struct ChatListView: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "slider.horizontal.3")
+                    Image("inactive")
+                        .resizable()
+                        .frame(width: 18.46,height: 18.46)
                 }
                 
             })

@@ -47,18 +47,18 @@ struct ConfirmDeleteScreen: View {
                         .foregroundStyle(Color("70-black"))
                         
                
-                }.padding(.horizontal, 50)
+                }.frame(width:265)
                     .padding(.top, 10)
                     .multilineTextAlignment(.center)
                 
                   Spacer()
                 
-                CustomButton(title: "Continue", width: geometry.size.width - 95) {
+                CustomButton(title: "Continue", width: 295) {
                     
                 }
                 .padding(.bottom, 10)
                 
-                CustomButtonLightGreen(title: "Cancel", width: geometry.size.width - 95, fontType: .bold, size: 16) {
+                CustomButtonLightGreen(title: "Cancel", width:295, fontType: .bold, size: 16) {
                     
                 }
                 .padding(.bottom, 30)
