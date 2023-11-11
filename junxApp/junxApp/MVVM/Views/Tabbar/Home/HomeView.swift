@@ -62,8 +62,8 @@ struct HomeView: View {
                 .font(.system(size: 14))
                 .foregroundStyle(.textSecondary)
         }
-        .padding(.top, 15)
-        .padding(.bottom, 30)
+        .padding(.top, 10)
+        .padding(.bottom, 20)
     }
     
     func NearYouView(width: CGFloat) -> some View {
