@@ -65,6 +65,7 @@ struct ContentView: View {
             }
             .onAppear(perform: {
                 Constants.size = geometry.size
+                Constants.safeArea = geometry.safeAreaInsets
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     withAnimation {
                         self.showSplash = false

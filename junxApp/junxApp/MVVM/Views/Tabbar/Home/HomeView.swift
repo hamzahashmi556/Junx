@@ -12,13 +12,25 @@ struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
-        ZStack{
+        
+        ZStack {
             
             WhiteBackground()
+            
+            VStack {
+
+                Spacer()
+            }
             
             ScrollView {
                 
                 VStack(spacing: 0) {
+                    
+                    NavigationBar(rightItems: [NavigationItem(image: .heart, action: {}),
+                                               NavigationItem(image: .notification, action: {})],
+                                  leftItems: [NavigationItem(image: .menu, action: {})],
+                                  rightPadding: 20,
+                                  leftPadding: 24)
                     
                     TitleView()
                     
@@ -29,29 +41,28 @@ struct HomeView: View {
                     NewMembersView()
                     
                     Spacer()
-                    
                 }
+//                .padding(.top, 35)
             }
-            .toolbar(.visible, for: .navigationBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Image(.menu).padding(.leading, 4)
-                }
-                
-                ToolbarItem(placement: .principal) {
-                    Image("text+image logo")
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    HStack {
-                        Image(.heart)
-                        Image(.notification)
-                    }
-                }
-            }
-            .toolbarTitleDisplayMode(.inline)
         }
-    
+//        .toolbar(.visible, for: .navigationBar)
+//        .toolbar {
+//            ToolbarItem(placement: .topBarLeading) {
+//                Image(.menu).padding(.leading, 4)
+//            }
+//            
+//            ToolbarItem(placement: .principal) {
+//                Image("text+image logo")
+//            }
+//            
+//            ToolbarItem(placement: .topBarTrailing) {
+//                HStack {
+//                    Image(.heart)
+//                    Image(.notification)
+//                }
+//            }
+//        }
+//        .toolbarTitleDisplayMode(.inline)
     }
     
     func TitleView() -> some View {
@@ -62,7 +73,7 @@ struct HomeView: View {
                 .font(.system(size: 14))
                 .foregroundStyle(.textSecondary)
         }
-        .padding(.top, 10)
+        .padding(.top, 15)
         .padding(.bottom, 20)
     }
     
@@ -219,5 +230,6 @@ struct NewMemberCard: View {
 }
 
 #Preview {
+//    ContentView()
     TabbarView(homeVM: HomeViewModel())
 }

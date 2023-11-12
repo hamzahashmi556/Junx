@@ -15,48 +15,90 @@ struct TabbarView: View {
     @State var index = 0
     
     var body: some View {
-        TabView(selection: $index) {
-            NavigationStack {
-                HomeView(viewModel: homeVM)
-            }
-            .tag(0)
-            .tabItem {
-                Label("", image: index == 0 ? .homeSelected : .homeUnselected)
-            }
-            NavigationStack {
-                ChatListView()
-            }
-            .tag(1)
-            .tabItem {
-                Label("", image: index == 1 ? .chatSelected : .chatUnselected)
-            }
+        
+        ZStack {
             
-            NavigationStack {
-                CardsView(homeVM: homeVM)
+            TabView(selection: $index) {
+                
+                NavigationStack {
+                    HomeView(viewModel: homeVM)
+                }
+                .tag(0)
+                
+                NavigationStack {
+                    ChatListView()
+                }
+                .tag(1)
+                
+                NavigationStack {
+                    CardsView(homeVM: homeVM)
+                }
+                .tag(2)
+                
+                NavigationStack {
+                    ExploreScreen()
+                    //                ExploreMembersView(homeVM: homeVM)
+                }
+                .tag(3)
+                
+                NavigationStack {
+                    ProfileView()
+                }
+                .tag(4)
             }
-            .tag(2)
-            .tabItem {
-                Label("", image: index == 2 ? .compassSelected : .compassUnselected)
-            }
+            .frame(width: Constants.size.width)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .ignoresSafeArea(edges: .bottom)
+            .padding(.bottom, Constants.safeArea.bottom)
+            .preferredColorScheme(.light)
             
-            NavigationStack {
-//                ExploreScreen()
-                ExploreMembersView(homeVM: homeVM)
-            }
-            .tag(3)
-            .tabItem {
-                Label("", image: index == 3 ? .searchSelected : .searchUnselected)
-            }
             
-            NavigationStack {
-                ProfileView()
-            }
-            .tag(4)
-            .tabItem {
-                Label("", image: index == 4 ? .profileSelected : .profileUnselected)
+            // Custom Tabbar
+            VStack {
+                
+                Spacer()
+                
+                HStack(spacing: 30) {
+                    
+                    Spacer()
+                    
+                    Image(index == 0 ? .homeSelected : .homeUnselected)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.index = 5
+                        }
+                    
+                    Image(index == 1 ? .chatSelected : .chatUnselected)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.index = 1
+                        }
+
+                    Image(index == 2 ? .compassSelected : .compassUnselected)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.index = 2
+                        }
+
+                    Image(index == 3 ? .searchSelected : .searchUnselected)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.index = 3
+                        }
+
+                    Image(index == 4 ? .profileSelected : .profileUnselected)
+                        .frame(maxWidth: .infinity)
+                        .onTapGesture {
+                            self.index = 4
+                        }
+                    
+                    Spacer()
+                }
+                .frame(width: Constants.size.width, height: 49 + Constants.safeArea.bottom)
+                .background(.tabbarBg)
+                .ignoresSafeArea()
             }
         }
-        .preferredColorScheme(.light)
     }
 }
 
