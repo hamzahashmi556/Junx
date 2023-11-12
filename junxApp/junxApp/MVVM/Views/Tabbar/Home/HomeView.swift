@@ -35,7 +35,7 @@ struct HomeView: View {
             .toolbar(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Image(.menu)
+                    Image(.menu).padding(.leading, 4)
                 }
                 
                 ToolbarItem(placement: .principal) {

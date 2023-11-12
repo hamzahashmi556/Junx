@@ -29,6 +29,7 @@ struct ChatListView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
                     Image("Back")
+                        .padding(.leading, 5)
                 }
                 
                 ToolbarItem(placement: .principal) {
@@ -37,6 +38,7 @@ struct ChatListView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "slider.horizontal.3")
+                        .padding(.trailing, 25)
                 }
                 
             })

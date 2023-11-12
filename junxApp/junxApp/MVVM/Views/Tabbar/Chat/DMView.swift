@@ -91,6 +91,7 @@ struct DMView: View {
                     Image(.searchNavigation)
 
                     Image(.menu)
+                        .padding(.trailing, 5)
                         .onTapGesture {
                             withAnimation {
                                 self.showMessages.toggle()
