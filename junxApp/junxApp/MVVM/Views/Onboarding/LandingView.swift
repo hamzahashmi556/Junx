@@ -56,13 +56,15 @@ struct LandingView: View {
                     
                     let width = geometry.size.width - 95
                     
-                    CustomButton(title: "Continue", width: width) {
+                    CustomButton(title: "Sign In", width: width) {
                         onboardingVM.isPresentedSelectLogin = true
                     }
-                    
-                    CustomButton(title: "Sign in", width: width) {
+                    CustomButtonLightGreen(title: "Sign Up", width: 295, fontType: .bold, size: 16, action: {
                         onboardingVM.isPresentedLogin = true
-                    }
+                    })
+//                    CustomButtonLightGreen(title: "Sign in", width: width) {
+//                        onboardingVM.isPresentedLogin = true
+//                    }
                 }
             }
         }

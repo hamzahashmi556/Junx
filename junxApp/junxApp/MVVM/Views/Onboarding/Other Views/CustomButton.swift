@@ -34,6 +34,34 @@ struct CustomButton: View {
     }
 }
 
+struct CustomButtonWithLogo: View {
+    
+    @State var title: String
+    
+    @State var width: CGFloat
+    
+    @State var action: () -> Void
+    
+    var body: some View {
+        
+        Button(action: action) {
+            ZStack {
+                LinearGradient(colors: [.buttonLinear1, .buttonLinear2],
+                               startPoint: .leading,
+                               endPoint: .trailing)
+                .clipShape(RoundedRectangle(cornerRadius: 32))
+                
+                Text(title)
+                    .font(.customFont(name: .inter, type: .bold, size: 16))
+                
+            }
+            .foregroundStyle(.white)
+            .frame(width: width, height: 56)
+        }
+    }
+}
+
+
 struct CircleButton : View {
     @State var title: String
     

@@ -15,45 +15,48 @@ struct AddFilterBottomSheet: View {
         ZStack{
 //            WhiteBackground()
             VStack(spacing: 0) {
-                
+                Spacer()
                 HStack {
-                    
+                    Spacer()
                     Text("Add Filters For Better Experience")
                         .font(.customFont(name: .manuale, type: .regular, size: 20))
                     
                     Spacer()
                 }
                 .padding(.horizontal, 25)
-                .padding(.top, 12)
-                
+                .padding(.top, 20)
+                Spacer()
                 Image(.hey)
-                    .padding(.top, 11)
+                   
                     .padding(.bottom, 11)
                 
                 Text("Enhance your Dating experience with our advanced filters! Find your perfect match by customizing your search criteria for age, location, and interests.\nFiltered explorations ")
                     .font(.customFont(name: .inter, type: .regular, size: 14))
-                    .foregroundStyle(.textSecondary)
+                    .foregroundStyle(Color("text-secondary-4"))
                     .padding(.horizontal, 25)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 0)
                     .multilineTextAlignment(.center)
                 
-                VStack(spacing: 15) {
-                    
-                    CustomButton(title: "Apply filter", width: Constants.size.width - 100, action: {
+                   Spacer()
+               
+                    CustomButton(title: "Apply filter", width: 295, action: {
                         
-                    })
+                    }).padding(.bottom,10)
                     
-                    CustomButtonLightGreen(title: "Cancel", width: Constants.size.width - 100, fontType: .bold, size: 16) {
+                    CustomButtonLightGreen(title: "Cancel", width: 295, fontType: .bold, size: 16) {
                         
                     }
-                }
-                .padding(.top)
+                
+                  
+               
+                    
+               
             }
             
         }
         .presentationDragIndicator(.visible)
         .presentationCornerRadius(24)
-        .presentationDetents([.height(409)])
+        .presentationDetents([.height(349)])
         .presentationBackground(.cardBg2)
     }
 }
