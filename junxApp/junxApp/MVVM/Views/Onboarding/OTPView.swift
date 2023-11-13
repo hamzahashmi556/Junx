@@ -47,6 +47,7 @@ struct OTPView: View {
                     .font(.customFont(name: .inter, type: .regular, size: 14))
                     .padding(.horizontal, 40)
                     .multilineTextAlignment(.center)
+                    .foregroundStyle(Color("70-black"))
                 
                 
                 HStack(spacing: 24) {

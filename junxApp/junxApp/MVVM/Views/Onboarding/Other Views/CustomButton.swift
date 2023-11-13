@@ -37,7 +37,7 @@ struct CustomButton: View {
 struct CustomButtonWithLogo: View {
     
     @State var title: String
-    
+    @State var imageName: String
     @State var width: CGFloat
     
     @State var action: () -> Void
@@ -51,8 +51,21 @@ struct CustomButtonWithLogo: View {
                                endPoint: .trailing)
                 .clipShape(RoundedRectangle(cornerRadius: 32))
                 
-                Text(title)
-                    .font(.customFont(name: .inter, type: .bold, size: 16))
+                HStack {
+                    
+                    Image(imageName)
+                    
+                        .padding(.leading)
+                        
+                    Spacer()
+                    Text(title)
+                        .font(.customFont(name: .inter, type: .bold, size: 16))
+                        .padding(.trailing,40)
+                    
+                    
+                    Spacer()
+                    
+                }
                 
             }
             .foregroundStyle(.white)
@@ -125,6 +138,7 @@ struct CustomButtonLightGreen: View {
 
 #Preview {
     VStack {
+        CustomButtonWithLogo(title: "Custom Button", imageName: "google 1", width: 295, action: {})
         CustomButton(title: "Custom Button", width: 375, action: {})
         
         CircleButton(title: "Circle Button", width: 375, height: 50, action: {})

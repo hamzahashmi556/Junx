@@ -27,21 +27,37 @@ struct SelectLoginView: View {
                 
                 Text("Let’s meet new people \naround you")
                     .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.textMain)
+                    .padding(.bottom,30)
                 
-                Spacer()
-                
+               
+               
                 let width = geometry.size.width - 95
                 
-                VStack(spacing: 16) {
-                    CustomButton(title: "Login with Phone", width: width) {
-                        onboardingVM.isPresentedPhoneNumber = true
-                    }
+                VStack(spacing: 13) {
+                    CustomButtonWithLogo(title: "Login with Google", imageName: "google 1", width: 295, action: {})
                     
-                    CustomButton(title: "Login with Google", width: width) {
-                        onboardingVM.isPresentedLogin = true
-                    }
+                    CustomButtonWithLogo(title: "Login with Apple", imageName: "apple-logo 1", width: 295, action: {})
+                    
+                    HStack{
+                        RoundedRectangle(cornerRadius: 0)
+                            .foregroundStyle(.borderline)
+                            .frame(width: 120,height: 1)
+                        Text("OR")
+                            .font(.customFont(name: .inter, type: .semiBold, size: 7.95))
+                            .foregroundStyle(.textsecondary5)
+                        RoundedRectangle(cornerRadius: 0)
+                            .foregroundStyle(.borderline)
+                            .frame(width: 120,height: 1)
+                    }.padding(.vertical,5)
+                    
+                    CustomButtonLightGreen(title: "Login with Email/Phone", width: 295, fontType: .bold, size: 16, action: {
+                        
+                    })
+                   
                 }
-                .padding(.bottom, 30)
+                .padding(.bottom, 10)
                 
                 HStack(spacing: 0) {
                     Text("Don’t have an account? ")
