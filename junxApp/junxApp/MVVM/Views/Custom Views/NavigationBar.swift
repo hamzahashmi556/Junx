@@ -14,6 +14,8 @@ struct NavigationItem {
 
 struct NavigationBar: View {
     
+    @State var title = ""
+    
     @State var rightItems: [NavigationItem] = []
     @State var leftItems: [NavigationItem] = []
     
@@ -26,9 +28,14 @@ struct NavigationBar: View {
         
         ZStack {
             
-            
-            // Logo
-            Image(.textImageLogo)
+            // Logo or Text
+            if title.isEmpty {
+                Image(.textImageLogo)
+            }
+            else {
+                Text(title)
+                    .font(.customFont(name: .inter, type: .regular, size: 16))
+            }
             
             // Left Items
             
