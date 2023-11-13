@@ -92,6 +92,7 @@ struct DMView: View {
                         .offset(x:4)
 
                     Image(.menu)
+                        .padding(.trailing, 5)
                         .onTapGesture {
                             withAnimation {
                                 self.showMessages.toggle()

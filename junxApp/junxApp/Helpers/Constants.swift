@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 struct Constants {
     
     private init() {}
     
     static var size = UIScreen.main.bounds.size
+    
+    static var safeArea = EdgeInsets()
 }

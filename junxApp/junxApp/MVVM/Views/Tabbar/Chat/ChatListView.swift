@@ -29,6 +29,7 @@ struct ChatListView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarLeading) {
                     Image("Back")
+                        .padding(.leading, 5)
                 }
                 
                 ToolbarItem(placement: .principal) {
@@ -36,9 +37,12 @@ struct ChatListView: View {
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image("inactive")
-                        .resizable()
-                        .frame(width: 18.46,height: 18.46)
+//                    Image(systemName: "slider.horizontal.3")
+                        
+                    Image(.inactive)
+                        .padding(.trailing, 25)
+//                        .resizable()
+//                        .frame(width: 18.46,height: 18.46)
                 }
                 
             })

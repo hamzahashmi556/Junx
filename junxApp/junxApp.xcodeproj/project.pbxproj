@@ -93,6 +93,7 @@
 		ABAF0A1A2AF6AAB700ED358A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A192AF6AAB700ED358A /* Constants.swift */; };
 		ABAF0A1C2AF6DD6200ED358A /* FindFriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF0A1B2AF6DD6200ED358A /* FindFriendsView.swift */; };
 		ABE866B32AF1A6EF0096415A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE866B22AF1A6EF0096415A /* AppUser.swift */; };
+		ABF784752B017D79007C0E55 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF784742B017D79007C0E55 /* NavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +185,7 @@
 		ABAF0A192AF6AAB700ED358A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABAF0A1B2AF6DD6200ED358A /* FindFriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsView.swift; sourceTree = "<group>"; };
 		ABE866B22AF1A6EF0096415A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		ABF784742B017D79007C0E55 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				ABAF0A142AF5B00000ED358A /* AddFilterBottomSheet.swift */,
 				AB7E56622AEE7B6F00B94AB0 /* StoryView.swift */,
 				ABA8CE2A2AFD3B8C00C969B4 /* SearchBar.swift */,
+				ABF784742B017D79007C0E55 /* NavigationBar.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				182D12122AFC1DED001C3B5C /* ExploreScreen.swift in Sources */,
 				AB31A8872AFAA50700D14F62 /* ArrangeMeetupView.swift in Sources */,
 				ABA8CE292AFD387B00C969B4 /* ExploreMembersView.swift in Sources */,
+				ABF784752B017D79007C0E55 /* NavigationBar.swift in Sources */,
 				AB974AB62AE3159B004BC717 /* ContentView.swift in Sources */,
 				ABAF0A1C2AF6DD6200ED358A /* FindFriendsView.swift in Sources */,
 				ABAF0A182AF699D500ED358A /* FilterView.swift in Sources */,
