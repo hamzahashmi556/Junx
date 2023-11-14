@@ -13,8 +13,10 @@ struct ChatListView: View {
     @State var isSearching = false
     
     var body: some View {
-        ZStack{
+        ZStack {
+            
             WhiteBackground()
+            
             ScrollView {
                 
                 SearchBar(text: $searchText, isSearching: $isSearching)
