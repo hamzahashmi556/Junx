@@ -14,24 +14,27 @@ struct VerifySelfieView: View {
             WhiteBackground()
             VStack{
                 Spacer()
-                Image("JunX text")
-                    .padding(.bottom,30)
-               
-                HStack {
+                VStack{
+                    Image("JunX text")
+                        .padding(.bottom,60)
                     
-                    Text("Please Wait, We're Verifying Your Identity.\n This May Take a Moment")
-                        .font(.customFont(name: .inter, type: .regular, size: 14))
-                    .foregroundStyle(Color("text-secondary-4"))
-                    .multilineTextAlignment(.center)
+                    HStack {
+                        
+                        Text("Please Wait, We're Verifying Your Identity.\n This May Take a Moment")
+                            .font(.customFont(name: .inter, type: .regular, size: 14))
+                            .foregroundStyle(Color("text-secondary-4"))
+                            .multilineTextAlignment(.center)
+                        
+                    }.padding(.horizontal,30)
+                        
+                }.offset(y:-90)
                
-                }.padding(.horizontal,30)
-                    .padding(.vertical,30)
                 Spacer()
                 
                 Image("Group 8757")
                     .resizable()
                     .frame(width: 51,height: 12)
-                    .padding(.bottom,40)
+                    .padding(.bottom,70)
                
             }
         }
