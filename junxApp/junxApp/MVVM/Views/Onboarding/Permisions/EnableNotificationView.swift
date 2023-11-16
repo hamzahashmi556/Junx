@@ -68,6 +68,7 @@ struct EnableNotificationView: View {
                 Text("Skip")
                     .font(.customFont(name: .skModernist, type: .bold, size: 16))
                     .foregroundStyle(.blackwhite)
+                    .padding(.trailing,25)
                 
             }
             

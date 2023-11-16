@@ -109,8 +109,9 @@ struct UserNameScreen: View {
                 Image("Back")
             }
             ToolbarItem(placement: .principal) {
-                Text("Profile Set Up")
-                    .font(.customFont(name: .SFPRO, type: .regular, size: 16))
+                Text("Profile Settings")
+                    .font(.customFont(name: .SFPRO, type: .medium, size: 16))
+                    //.foregroundStyle(.onlyblack)
                 
             }
             

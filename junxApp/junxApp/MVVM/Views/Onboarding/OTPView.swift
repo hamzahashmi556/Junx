@@ -43,7 +43,7 @@ struct OTPView: View {
                     .padding([.horizontal, .top], 25)
                     .padding(.bottom, 20)
                 
-                Text("Type the verification code \nwe’ve sent you")
+                Text("Type the verification code \n we’ve sent you to your email address.")
                     .font(.customFont(name: .inter, type: .regular, size: 14))
                     .padding(.horizontal, 40)
                     .multilineTextAlignment(.center)
@@ -62,77 +62,87 @@ struct OTPView: View {
                 }
                 .padding(.top, 67)
                 
+                Text("Resend code")
+                    .font(.customFont(name: .inter, type: .medium, size: 14))
+                    .padding(.horizontal, 40)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Color("25131A"))
+                    .padding(.top,30)
+                
                 Spacer()
                 
-                KeyboardView { key in
-                    keyPressed(key: key)
-                }
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Send Again")
-                })
-                .padding(.top, 54)
-                .padding(.bottom, geometry.safeAreaInsets.bottom)
-                .foregroundStyle(Color(hexString: "ED6EF7"))
+//                KeyboardView { key in
+//                    keyPressed(key: key)
+//                }
+//                
+//                Button(action: {
+//                    
+//                }, label: {
+//                    Text("Send Again")
+//                })
+//                .padding(.top, 54)
+//                .padding(.bottom, geometry.safeAreaInsets.bottom)
+//                .foregroundStyle(Color(hexString: "ED6EF7"))
             }
             
-            tintBackground()
-            
-            VStack(spacing:0) {
-                Spacer()
-                RoundedRectangle(cornerRadius: 30)
-                    .foregroundStyle(.cardBg)
-                    .frame(width: geometry.size.width - 40,height: 388)
+            if onboardingVM.isVerified {
+                tintBackground()
                 
-                    .overlay(
-                        VStack{
-                            
-                            Image("Circlesuccess")
-                                .resizable()
-                                .frame(width: 140,height: 140)
-                                .padding(.top,30)
-                            
-                           
-                           
-                            
-                            HStack {
-                                Text("You’re Verified")
-                                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                                    .foregroundStyle(Color("text-main-2"))
+                VStack(spacing:0) {
+                    Spacer()
+                    RoundedRectangle(cornerRadius: 30)
+                        .foregroundStyle(.cardBg)
+                        .frame(width: geometry.size.width - 40,height: 388)
+                    
+                        .overlay(
+                            VStack{
+                                
+                                Image("Circlesuccess")
+                                    .resizable()
+                                    .frame(width: 140,height: 140)
+                                    .padding(.top,30)
                                 
                                
-                            }.frame(height: 34)
-                           
-                            HStack{
-                                Text("Complete your profile to start matching.")
-                                    .font(.customFont(name: .inter, type: .regular, size: 14))
-                                    .foregroundStyle( Color("70-black"))
-                                    .multilineTextAlignment(.center)
-                            }.padding(.horizontal,30)
-                                .padding(.top,5)
-                            
-                            
-                            
-                            
-                            Spacer()
-                            
-                            CustomButton(title: "Continue", width: 295, action: {
+                               
                                 
-                            }).padding(.bottom,25)
-                            
-                           
-                        }
-                    )
+                                HStack {
+                                    Text("You’re Verified")
+                                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                                        .foregroundStyle(Color("text-main-2"))
+                                    
+                                   
+                                }.frame(height: 34)
+                               
+                                HStack{
+                                    Text("Complete your profile to start matching.")
+                                        .font(.customFont(name: .inter, type: .regular, size: 14))
+                                        .foregroundStyle( Color("70-black"))
+                                        .multilineTextAlignment(.center)
+                                }.padding(.horizontal,30)
+                                    .padding(.top,5)
+                                
+                                
+                                
+                                
+                                Spacer()
+                                
+                                CustomButton(title: "Continue", width: 295, action: {
+                                    
+                                }).padding(.bottom,25)
+                                
+                               
+                            }
+                        )
+                        
                     
-                
-                Spacer()
-            }.padding(.bottom,80)
+                    Spacer()
+                }.padding(.bottom,80)
+            }
+           
             
         }
         .frame(width: geometry.size.width, height: geometry.size.height)
-        .navigationTitle("Registration")
+        
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(toolbarVisibility, for: .navigationBar)
         .toolbar(content: {
@@ -142,6 +152,13 @@ struct OTPView: View {
                 } label: {
                     Image("Back")
                 }
+            }
+            
+            ToolbarItem(placement: .principal) {
+                Text("Registration")
+                    .font(.customFont(name: .SFPRO, type: .medium, size: 16))
+                    //.foregroundStyle(.onlyblack)
+                
             }
         })
     }
