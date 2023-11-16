@@ -71,18 +71,18 @@ struct OTPView: View {
                 
                 Spacer()
                 
-                KeyboardView { key in
-                    keyPressed(key: key)
-                }
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Send Again")
-                })
-                .padding(.top, 54)
-                .padding(.bottom, geometry.safeAreaInsets.bottom)
-                .foregroundStyle(Color(hexString: "ED6EF7"))
+//                KeyboardView { key in
+//                    keyPressed(key: key)
+//                }
+//                
+//                Button(action: {
+//                    
+//                }, label: {
+//                    Text("Send Again")
+//                })
+//                .padding(.top, 54)
+//                .padding(.bottom, geometry.safeAreaInsets.bottom)
+//                .foregroundStyle(Color(hexString: "ED6EF7"))
             }
             
             if onboardingVM.isVerified {
@@ -160,7 +160,7 @@ struct OTPView: View {
                     //.foregroundStyle(.onlyblack)
                 
             }
-        })#
+        })
     }
 
     func keyPressed(key: String) {

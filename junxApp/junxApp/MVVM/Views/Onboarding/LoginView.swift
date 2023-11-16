@@ -116,17 +116,23 @@ struct LoginBottomSheet: View {
             VStack(spacing: 0) {
                 HStack{
                    
-                    Group{
-                        Image("messages")
-                            .resizable()
-                            .frame(width: 36,height: 36)
-                    }.frame(width: 40,height: 40)
+                    HStack{
+                        Group{
+                            Image("messages")
+                                .resizable()
+                                .frame(width: 36,height: 36)
+                        }.frame(width: 40,height: 40)
+                        
+                        
+                        Text("Password reset via SMS")
+                            .font(.customFont(name: .inter, type: .regular, size: 16))
+                            .foregroundStyle(Color("0C212C"))
+                    }.padding(.leading,20)
                     
-                    
-                    Text("Password reset via SMS")
-                        .font(.customFont(name: .inter, type: .regular, size: 16))
-                        .foregroundStyle(Color("0C212C"))
+                   
+                      
                     Spacer()
+                    
                     Circle()
                         .frame(width: 40,height: 40)
                         .foregroundStyle(.buttonLinear2)
@@ -134,25 +140,29 @@ struct LoginBottomSheet: View {
                            Image("chevron-left")
                             .resizable()
                             .frame(width: 24,height: 24)
-                        ).padding(.leading,30)
+                        )
                    
                 }
-                .frame(width: geometry.size.width - 70,height: 40)
+                .frame(width: 329,height: 40)
                 .padding(.top,25)
-                
+               
                
                 
                 HStack{
-                    Group{
-                        Image("mail 2")
-                            .resizable()
-                            .frame(width: 40,height: 40)
-                    }.frame(width: 40,height: 40)
-                   
-                        
-                    Text("Password reset via Email")
-                        .font(.customFont(name: .inter, type: .regular, size: 16))
-                        .foregroundStyle(Color("0C212C"))
+                    HStack{
+                        Group{
+                            Image("mail 2")
+                                .resizable()
+                                .frame(width: 40,height: 40)
+                        }.frame(width: 40,height: 40)
+                       
+                            
+                        Text("Password reset via Email")
+                            .font(.customFont(name: .inter, type: .regular, size: 16))
+                            .foregroundStyle(Color("0C212C"))
+                           
+                    }.padding(.leading,20)
+                  
                     Spacer()
                     Circle()
                         .frame(width: 40,height: 40)
@@ -161,9 +171,9 @@ struct LoginBottomSheet: View {
                            Image("chevron-left")
                             .resizable()
                             .frame(width: 24,height: 24)
-                        ).padding(.leading,30)
+                        )//.padding(.leading,30)
                   
-                }.frame(width: geometry.size.width - 70,height: 40)
+                }.frame(width: 329,height: 40)
                     .padding(.top,25)
                    
                 
