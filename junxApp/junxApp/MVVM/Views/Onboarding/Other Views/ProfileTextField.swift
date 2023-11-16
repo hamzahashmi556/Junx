@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ProfileTextField: View {
+    
     @Binding var title: String
+    
     @State var placeHolder: String
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
@@ -26,7 +29,8 @@ struct ProfileTextField: View {
                         Spacer()
                     }
                 )
-        }.frame(width: 275,height: 54)
+        }
+        .frame(width: UIScreen.main.bounds.width - 114, height: 54)
     }
 }
 

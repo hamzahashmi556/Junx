@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationItem {
     var image: ImageResource
-    var action: () -> Void
+    var action: (() -> Void)? = nil
 }
 
 struct NavigationBar: View {

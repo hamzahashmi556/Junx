@@ -35,18 +35,28 @@ struct NameScreen: View {
                     
                 })
                 .padding(.horizontal, 25)
-                
-                let width = geometry.size.width - 80
-                
+                                
                 VStack(spacing: 16) {
                     
                     ProfileTextField(title: .constant(""), placeHolder: "First Name")
                     
                     ProfileTextField(title: .constant(""), placeHolder: "Last Name")
                     
-                    
                 }
                 .padding(.top, 35)
+                
+                HStack {
+                    
+                    Spacer()
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke()
+                    }
+                    
+                    Spacer()
+                }
+                .frame(width: UIScreen.main.bounds.width - 114, height: 54)
                 
                 Spacer()
                 
