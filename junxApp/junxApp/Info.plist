@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Urbanist-Bold.ttf</string>
 		<string>Manuale-SemiBold.ttf</string>
 		<string>Manuale-Regular.ttf</string>
 		<string>Manuale-Bold.ttf</string>
@@ -20,6 +21,11 @@
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Medium.ttf</string>
 		<string>Roboto-Regular.ttf</string>
+		<string>Urbanist-Medium.ttf</string>
+		<string>Urbanist-Regular.ttf</string>
+		<string>Urbanist-SemiBold.ttf</string>
+		<string>Urbanist-LightMedium.ttf</string>
+		<string>SFPRODISPLAYREGULAR.OTF</string>
 	</array>
 </dict>
 </plist>

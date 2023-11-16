@@ -27,12 +27,18 @@ struct TextFieldBordered: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke()
-                    .foregroundStyle(.tfBorder)
+                    .foregroundStyle(.tfborder4)
                 
                 if isSecureField {
-                    SecureField("", text: $text)
-                        .frame(height: width * 0.2)
+                    HStack {
+                        SecureField("", text: $text)
+                            .frame(height: width * 0.2)
                         .padding(.leading)
+                        Image("Vectoreye")
+                            .padding(.horizontal)
+
+                        
+                    }
                 }
                 else {
                     TextField("", text: $text)

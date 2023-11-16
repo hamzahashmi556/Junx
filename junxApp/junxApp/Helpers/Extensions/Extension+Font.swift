@@ -21,6 +21,8 @@ enum FontName: String {
     case skModernist = "Sk-Modernist"
     case mulish = "Mulish"
     case roboto = "Roboto"
+    case urbanist = "Urbanist"
+    case SFPRO = "SF-PRO"
 }
 
 enum FontsType: String {

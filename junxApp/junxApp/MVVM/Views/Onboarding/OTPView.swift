@@ -78,6 +78,58 @@ struct OTPView: View {
                 .foregroundStyle(Color(hexString: "ED6EF7"))
             }
             
+            tintBackground()
+            
+            VStack(spacing:0) {
+                Spacer()
+                RoundedRectangle(cornerRadius: 30)
+                    .foregroundStyle(.cardBg)
+                    .frame(width: geometry.size.width - 40,height: 388)
+                
+                    .overlay(
+                        VStack{
+                            
+                            Image("Circlesuccess")
+                                .resizable()
+                                .frame(width: 140,height: 140)
+                                .padding(.top,30)
+                            
+                           
+                           
+                            
+                            HStack {
+                                Text("You’re Verified")
+                                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                                    .foregroundStyle(Color("text-main-2"))
+                                
+                               
+                            }.frame(height: 34)
+                           
+                            HStack{
+                                Text("Complete your profile to start matching.")
+                                    .font(.customFont(name: .inter, type: .regular, size: 14))
+                                    .foregroundStyle( Color("70-black"))
+                                    .multilineTextAlignment(.center)
+                            }.padding(.horizontal,30)
+                                .padding(.top,5)
+                            
+                            
+                            
+                            
+                            Spacer()
+                            
+                            CustomButton(title: "Continue", width: 295, action: {
+                                
+                            }).padding(.bottom,25)
+                            
+                           
+                        }
+                    )
+                    
+                
+                Spacer()
+            }.padding(.bottom,80)
+            
         }
         .frame(width: geometry.size.width, height: geometry.size.height)
         .navigationTitle("Registration")

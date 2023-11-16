@@ -1,14 +1,13 @@
 //
-//  EmailView.swift
+//  NameScreen.swift
 //  junxApp
 //
-//  Created by Hamza Hashmi on 22/10/2023.
+//  Created by apple on 16/11/2023.
 //
 
 import SwiftUI
 
-struct EmailView: View {
-    
+struct NameScreen: View {
     @ObservedObject var onboardingVM: OnboardingViewModel
     @State var geometry: GeometryProxy
     @State var toolbarVisibility: Visibility
@@ -26,16 +25,13 @@ struct EmailView: View {
                 
                 VStack(spacing: 18, content: {
                     
-                    Text("Mail Address Here")
+                    Text("Let’s Get Acquainted!")
                         .padding(.top, 35)
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                         .foregroundStyle(.textMain)
                     
                   
-                        Text("Enter the email address associated with your account.")
-                            .font(.customFont(name: .inter, type: .regular, size: 14))
-                            .multilineTextAlignment(.center)
-                            .foregroundStyle(Color("70-black"))
+                       
                     
                 })
                 .padding(.horizontal, 25)
@@ -44,7 +40,11 @@ struct EmailView: View {
                 
                 VStack(spacing: 16) {
                     
-                    TextFieldBordered(text: $email, title: "Email", color: .tfBorder2, isSecureField: false, width: width)
+                    ProfileTextField(title: .constant(""), placeHolder: "First Name")
+                    
+                    ProfileTextField(title: .constant(""), placeHolder: "Last Name")
+                    
+                    
                 }
                 .padding(.top, 35)
                 
@@ -62,8 +62,8 @@ struct EmailView: View {
                 Image("Back")
             }
             ToolbarItem(placement: .principal) {
-                Text("Registration")
-                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                Text("Profile Set Up")
+                    .font(.customFont(name: .SFPRO, type: .regular, size: 16))
                 
             }
             
@@ -76,8 +76,9 @@ struct EmailView: View {
 
 #Preview {
     NavigationView {
-        GeometryReader { geometry in
-            EmailView(onboardingVM: OnboardingViewModel(), geometry: geometry, toolbarVisibility: .visible)
+        GeometryReader { geo in
+            NameScreen(onboardingVM: OnboardingViewModel(), geometry: geo, toolbarVisibility: .visible)
         }
     }
+   
 }
