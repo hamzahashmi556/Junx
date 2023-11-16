@@ -15,7 +15,7 @@ struct ForgotPasswordView: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     @State var toolbarVisibility: Visibility
-    @State var showSuccess: Bool = true
+    @State var showSuccess: Bool = false
     var body: some View {
         
         ZStack {
@@ -143,7 +143,7 @@ struct ForgotPasswordView: View {
             }
             ToolbarItem(placement: .principal) {
                 Text("Registration")
-                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                    .font(.customFont(name: .SFPRO, type: .medium, size: 16))
                 
             }
             

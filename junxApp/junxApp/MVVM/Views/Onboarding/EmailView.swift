@@ -63,7 +63,7 @@ struct EmailView: View {
             }
             ToolbarItem(placement: .principal) {
                 Text("Registration")
-                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                    .font(.customFont(name: .SFPRO, type: .medium, size: 16))
                 
             }
             

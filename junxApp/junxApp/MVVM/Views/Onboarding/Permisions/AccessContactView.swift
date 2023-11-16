@@ -31,6 +31,8 @@ struct AccessContactView: View {
                 VStack(spacing: 15) {
                     
                     Image("contactlist")
+                        .resizable()
+                        .frame(width: 240,height: 240)
                     VStack{
                         Text("Search Contacts")
                             
@@ -67,6 +69,7 @@ struct AccessContactView: View {
                 Text("Skip")
                     .font(.customFont(name: .skModernist, type: .bold, size: 16))
                     .foregroundStyle(.blackwhite)
+                    .padding(.trailing,25)
                 
             }
             
