@@ -15,6 +15,7 @@ struct SelectionCard: View {
             if selected {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundStyle(Color("greenTheme"))
+                    .shadow(color:.onlyblack.opacity(0.25),radius: 1,x:0,y:4)
                     .overlay(
                         HStack{
                             Text(title)
@@ -29,6 +30,7 @@ struct SelectionCard: View {
                           
 
                         }.padding(.horizontal,20)
+                           
                     )
             }  else {
                 RoundedRectangle(cornerRadius: 15)

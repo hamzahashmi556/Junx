@@ -30,7 +30,7 @@ class OnboardingViewModel: ObservableObject {
     @Published var isPresentedForgotPassword = false
     @Published var isPresentedEmail = false
     @Published var isPresentedLogin = false
-    @Published var isShowLoginOption = true
+    @Published var isShowLoginOption = false
     
     
 }

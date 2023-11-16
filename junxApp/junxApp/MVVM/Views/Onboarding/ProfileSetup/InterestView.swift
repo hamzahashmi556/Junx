@@ -1,5 +1,5 @@
 //
-//  UploadPhotoView.swift
+//  InterestView.swift
 //  junxApp
 //
 //  Created by apple on 16/11/2023.
@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct UploadPhotoView: View {
+struct InterestView: View {
     @ObservedObject var onboardingVM: OnboardingViewModel
     @State var geometry: GeometryProxy
     @State var toolbarVisibility: Visibility
     @State var email = ""
-    @State var imageName : [String] = ["profilephot","profilephotoplaceholder","profilephotoplaceholder","profilephotoplaceholder"]
     @State var wrongUser: Bool = true
-    @State private var coloumns = [GridItem(), GridItem()]
     var body: some View {
         
         
@@ -27,12 +25,13 @@ struct UploadPhotoView: View {
                 
                 VStack(spacing: 18, content: {
                     
-                    Text("Add your Photos")
+                    Text("You’re Interested In?")
                         .padding(.top, 35)
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                         .foregroundStyle(.textMain)
                     
-                    
+                  
+                       
                     
                 })
                 .padding(.horizontal, 25)
@@ -41,12 +40,12 @@ struct UploadPhotoView: View {
                 
                 VStack(spacing: 15) {
                     
-                    LazyVGrid(columns: coloumns, spacing: 10) {
-                        ForEach(0 ..< imageName.count, id: \.self) { index in
-                           Image(imageName[index])
-                        }
-                    }
-                    .padding(.horizontal, 45)
+                    SelectionCard(title: "Woman", selected: .constant(false))
+                    SelectionCard(title: "Man", selected: .constant(true))
+                    SelectionCard(title: "Non-Binary", selected: .constant(false))
+                    SelectionCard(title: "Trans", selected: .constant(false))
+                    
+                   
                     
 
                 }
@@ -79,10 +78,10 @@ struct UploadPhotoView: View {
 }
 
 #Preview {
+    
     NavigationView {
         GeometryReader { geo in
-            UploadPhotoView(onboardingVM: OnboardingViewModel(), geometry: geo, toolbarVisibility: .visible)
+            InterestView(onboardingVM: OnboardingViewModel(), geometry: geo, toolbarVisibility: .visible)
         }
     }
-   
 }
