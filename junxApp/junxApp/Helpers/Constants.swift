@@ -16,4 +16,8 @@ struct Constants {
     static var size = UIScreen.main.bounds.size
     
     static var safeArea = EdgeInsets()
+    
+    static let width = UIScreen.main.bounds.width
+    
+    static let buttonWidth = UIScreen.main.bounds.width * 0.757
 }

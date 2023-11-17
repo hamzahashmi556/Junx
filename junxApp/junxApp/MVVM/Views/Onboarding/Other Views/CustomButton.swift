@@ -11,7 +11,7 @@ struct CustomButton: View {
     
     @State var title: String
     
-    @State var width: CGFloat
+    @State var width: CGFloat = Constants.buttonWidth
     
     @State var action: () -> Void
     

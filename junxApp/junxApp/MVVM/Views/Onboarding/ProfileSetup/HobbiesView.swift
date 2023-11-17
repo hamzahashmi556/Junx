@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-let width = UIScreen.main.bounds.width
-
 struct HobbiesView: View {
     
     
@@ -44,7 +42,7 @@ struct HobbiesView: View {
                 
                 Spacer()
                 
-                CustomButton(title: "Continue", width: width * 0.757) {
+                CustomButton(title: "Continue") {
                     
                 }
             }
