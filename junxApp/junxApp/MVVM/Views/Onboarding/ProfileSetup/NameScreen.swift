@@ -21,42 +21,43 @@ struct NameScreen: View {
             
             WhiteBackground()
             
-            VStack {
+            VStack(spacing: 0) {
                 
-                VStack(spacing: 18, content: {
-                    
-                    Text("Let’s Get Acquainted!")
-                        .padding(.top, 35)
-                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                        .foregroundStyle(.textMain)
-                    
-                  
-                       
-                    
-                })
-                .padding(.horizontal, 25)
-                                
-                VStack(spacing: 16) {
+                Text("Let’s Get Acquainted!")
+                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                    .padding(.top, 28)
+                    .padding(.horizontal, 25)
+                    .foregroundStyle(.textMain)
+                
+                VStack(spacing: 10) {
                     
                     ProfileTextField(title: .constant(""), placeHolder: "First Name")
                     
                     ProfileTextField(title: .constant(""), placeHolder: "Last Name")
                     
+                    DatePickerView()
                 }
-                .padding(.top, 35)
+                .padding(.top, 52)
                 
                 HStack {
                     
+                    RoundedRectangle(cornerRadius: 6)
+                        .stroke()
+                        .frame(width: 19, height: 19)
+                    
+                    Text("By clicking here, I admit I am at least")
+                        .font(.customFont(name: .urbanist, type: .medium, size: 11))
+                        .foregroundStyle(.textMain)
+                    +
+                    Text(" 18 years of age or older")
+                        .font(.customFont(name: .urbanist, type: .semiBold, size: 11))
+                        .foregroundStyle(.greenwithblack)
+                    
                     Spacer()
                     
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke()
-                    }
-                    
-                    Spacer()
                 }
-                .frame(width: UIScreen.main.bounds.width - 114, height: 54)
+                .padding(.top, 20)
+                .padding(.horizontal, 57)
                 
                 Spacer()
                 
@@ -72,15 +73,44 @@ struct NameScreen: View {
                 Image("Back")
             }
             ToolbarItem(placement: .principal) {
-                Text("Profile Set Up")
-                    .font(.customFont(name: .SFPRO, type: .regular, size: 16))
-                
+                Text("Registration")
+                    .font(.customFont(name: .SFPRO, type: .medium, size: 16))
             }
-            
-            
-            
         })
-        
+    }
+    
+    func DatePickerView() -> some View {
+        ZStack {
+            
+            HStack(spacing: 0) {
+                
+                Text("1")
+                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                    .frame(width: 70)
+                
+                Rectangle()
+                    .frame(width: 3, height: 54)
+                    .foregroundStyle(.datepickerBorder)
+                
+                Text("January")
+                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                    .frame(maxWidth: .infinity)
+                
+                Rectangle()
+                    .frame(width: 3, height: 54)
+                    .foregroundStyle(.datepickerBorder)
+
+                Text("2023")
+                    .font(.customFont(name: .inter, type: .regular, size: 16))
+                    .frame(width: 70)
+            }
+        }
+        .frame(width: UIScreen.main.bounds.width - 114, height: 54)
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(lineWidth: 2.5)
+                .foregroundStyle(.datepickerBorder)
+        }
     }
 }
 
