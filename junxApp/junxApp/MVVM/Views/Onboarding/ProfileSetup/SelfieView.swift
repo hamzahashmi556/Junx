@@ -37,7 +37,7 @@ struct SelfieView: View {
             .padding(.top, 42)
             .padding(.horizontal, 16)
             
-            Image(.sample1)
+            Image(.men)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 416)

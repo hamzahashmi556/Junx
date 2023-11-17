@@ -32,6 +32,7 @@ class OnboardingViewModel: ObservableObject {
     @Published var isPresentedLogin = false
     @Published var isShowLoginOption = true
     @Published var isVerified = false
+    @Published var verificationsheet = true
     
     
 }
