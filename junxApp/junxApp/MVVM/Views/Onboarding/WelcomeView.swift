@@ -9,13 +9,15 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    @State var titles = ["Welcome \nto junX",
+    @State var titles = [
                          "Discover Your \nPerfect Match",
                          "Your Safety, \nOur Priority"]
     
-    @State var subTitles = ["Where Connections Blossom.",
+    @State var subTitles = [
                             "We Tailor Matches for You.",
                             "Secure Dating Guaranteed."]
+    
+    @State var para = ["Join a vibrant community of singles looking for love. Swipe right to start your journey.","We're committed to your safety. Explore our verification and reporting tools for a worry-free dating experience"]
     
     @State var tag: Int
     
@@ -58,10 +60,11 @@ struct WelcomeView: View {
                 Image("onboarding vector")
                     .padding(.vertical, 40)
                 
-                Text("Join a vibrant community of singles looking for love. Swipe right to start your journey.")
+                Text(para[tag])
                     .padding(.horizontal, 20)
                     .font(.customFont(name: .inter, type: .medium, size: 14))
                     .multilineTextAlignment(.center)
+                    .foregroundStyle(Color("text-secondary-4"))
                 
                 
                 Spacer()
@@ -75,14 +78,14 @@ struct WelcomeView: View {
 #Preview {
     
     TabView {
+//        WelcomeView(tag: 0)
+//            .tag(0)
+        
         WelcomeView(tag: 0)
             .tag(0)
         
         WelcomeView(tag: 1)
             .tag(1)
-        
-        WelcomeView(tag: 2)
-            .tag(2)
     }
     .tabViewStyle(.page(indexDisplayMode: .always))
     .ignoresSafeArea()

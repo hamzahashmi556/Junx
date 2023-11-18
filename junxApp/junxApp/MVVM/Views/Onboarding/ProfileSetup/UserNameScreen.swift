@@ -36,7 +36,7 @@ struct UserNameScreen: View {
                 })
                 .padding(.horizontal, 25)
                 
-                let width = geometry.size.width - 100
+               
                 
                 VStack(spacing: 15) {
                     

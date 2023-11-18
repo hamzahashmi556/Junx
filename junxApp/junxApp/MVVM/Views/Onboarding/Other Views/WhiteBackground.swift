@@ -24,6 +24,23 @@ struct WhiteBackground: View {
     }
 }
 
+struct splashBackground: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        if colorScheme == .light {
+            Color.greenTheme
+        }
+        else {
+            LinearGradient(colors: [.mainBackgroundLinear1, .mainBackgroundLinear2],
+                           startPoint: .top,
+                           endPoint: .bottom)
+            .ignoresSafeArea()
+        }
+    }
+}
+
 struct tintBackground: View {
     
     @Environment(\.colorScheme) var colorScheme

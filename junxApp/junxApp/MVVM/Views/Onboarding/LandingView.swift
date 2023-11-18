@@ -46,6 +46,7 @@ struct LandingView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 50)
                     .padding(.top, 10)
+                    .foregroundStyle(Color("textsecondary-5").opacity(0.7))
                 //                        .padding(.bottom, 80)
                 
                 

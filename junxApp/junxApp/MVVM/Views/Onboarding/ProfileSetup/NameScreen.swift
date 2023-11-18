@@ -21,13 +21,20 @@ struct NameScreen: View {
             
             WhiteBackground()
             
-            VStack(spacing: 0) {
+            VStack {
                 
-                Text("Let’s Get Acquainted!")
-                    .font(.customFont(name: .manuale, type: .semiBold, size: 24))
-                    .padding(.top, 28)
-                    .padding(.horizontal, 25)
-                    .foregroundStyle(.textMain)
+                VStack(spacing: 18, content: {
+                    
+                    Text("Let’s get acquainted!")
+                        .padding(.top, 35)
+                        .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                        .foregroundStyle(.textMain)
+                    
+                  
+                       
+                    
+                })
+                .padding(.horizontal, 25)
                 
                 VStack(spacing: 10) {
                     
@@ -56,7 +63,7 @@ struct NameScreen: View {
                     Spacer()
                     
                 }
-                .padding(.top, 20)
+                .padding(.top)
                 .padding(.horizontal, 57)
                 
                 Spacer()

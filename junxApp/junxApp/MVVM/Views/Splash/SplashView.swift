@@ -15,10 +15,12 @@ struct SplashView: View {
         
         ZStack {
             
-            LinearGradient(colors: [.mainBackgroundLinear1, .mainBackgroundLinear2],
-                           startPoint: .top,
-                           endPoint: .bottom)
-            .ignoresSafeArea()
+            splashBackground()
+                .ignoresSafeArea()
+//            LinearGradient(colors: [.mainBackgroundLinear1, .mainBackgroundLinear2],
+//                           startPoint: .top,
+//                           endPoint: .bottom)
+//            .ignoresSafeArea()
             
             Image("text logo")
         }
