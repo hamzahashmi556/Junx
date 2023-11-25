@@ -24,6 +24,7 @@ struct CardsView: View {
                     
                     Text("Lets Explore!")
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                        .padding(.vertical,30)
                     
                     HStack(alignment: .bottom) {
                         
@@ -65,14 +66,28 @@ struct CardsView: View {
                     Spacer()
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Image("text+image logo")
+           
+        }
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.visible, for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    //dismiss.callAsFunction()
+                } label: {
+                    Image("Back")
+                        .padding(.leading,10)
                 }
-                
-                ToolbarItem(placement: .topBarTrailing) {
-                    Image("header")
-                }
+            }
+            ToolbarItem(placement: .principal) {
+                Image("text+image logo")
+            }
+            
+            ToolbarItem(placement: .topBarTrailing) {
+                Image("header")
+                    .padding(.trailing,10)
             }
         }
        
@@ -227,5 +242,9 @@ struct CardView: View {
 }
 
 #Preview {
-    TabbarView(homeVM: HomeViewModel(), index: 2)
+    NavigationView {
+        GeometryReader { geometry in
+            CardsView(homeVM: HomeViewModel())
+        }
+    }
 }

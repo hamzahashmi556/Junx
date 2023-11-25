@@ -12,7 +12,7 @@ struct UserNameScreen: View {
     @State var geometry: GeometryProxy
     @State var toolbarVisibility: Visibility
     @State var email = ""
-    @State var wrongUser: Bool = false
+    @State var wrongUser: Bool = true
     var body: some View {
         
         

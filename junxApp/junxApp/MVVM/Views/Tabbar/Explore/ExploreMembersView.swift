@@ -13,9 +13,9 @@ struct ExploreMembersView: View {
     
     @ObservedObject var homeVM: HomeViewModel
     private let threeColumnGrid = [
-            GridItem(.flexible(), spacing: 0),
-            GridItem(.flexible(), spacing: 0),
-            GridItem(.flexible(), spacing: 0),
+        GridItem(.fixed(130), spacing: 0),
+            GridItem(.fixed(130), spacing: 0),
+            GridItem(.fixed(130), spacing: 0),
         ]
     @State var searchedText = ""
     @State var isSearching = false
@@ -27,10 +27,12 @@ struct ExploreMembersView: View {
                 
                 SearchBar(text: $searchedText, isSearching: $isSearching)
                     .padding(.horizontal, 40)
+                    .padding(.vertical,10)
                 
                 Text("Let’s Explore Our Community!")
                     .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                     .foregroundStyle(.textMain)
+                    .padding(.bottom,10)
                 
                 ScrollView {
                     LazyVGrid(columns: threeColumnGrid, spacing: 0, content: {
@@ -65,7 +67,7 @@ struct ExploreMembersView: View {
             Image(user.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: width, height: width)
+                .frame(width: 130, height: 114)
                 .scaledToFill()
                 .clipShape(RoundedRectangle(cornerRadius: 5))
             
@@ -90,15 +92,15 @@ struct ExploreMembersView: View {
                 .padding(.horizontal)
             }
         }
-        .frame(width: width, height: width)
+       .frame(width: 130, height: 114)
         .foregroundStyle(.white)
         .multilineTextAlignment(.leading)
     }
 }
 
 #Preview {
-//    NavigationView {
-//        ExploreMembersView(homeVM: HomeViewModel())
-//    }
-    TabbarView(homeVM: HomeViewModel(), index: 3)
+    NavigationView {
+        ExploreMembersView(homeVM: HomeViewModel())
+    }
+    //TabbarView(homeVM: HomeViewModel(), index: 3)
 }

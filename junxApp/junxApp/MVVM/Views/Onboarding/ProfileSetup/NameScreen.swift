@@ -25,7 +25,7 @@ struct NameScreen: View {
                 
                 VStack(spacing: 18, content: {
                     
-                    Text("Let’s get acquainted!")
+                    Text("Let’s Get Acquainted!")
                         .padding(.top, 35)
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
                         .foregroundStyle(.textMain)

@@ -53,21 +53,24 @@ struct MatchesScreen: View {
                     HStack {
                         Spacer()
                         Text("Don’t waste more time! Just start a conversation with each other....")
-                            .font(.customFont(name: .inter, type: .semiBold, size: 14))
+                            .font(.customFont(name: .inter, type: .regular, size: 14))
                             .multilineTextAlignment(.center)
-                            .foregroundStyle(.textSecondary)
+                            .foregroundStyle(Color("70-black"))
                             .padding(.top,5)
                         Spacer()
-                    }.padding(.horizontal,15)
+                    }.padding(.horizontal,25)
+                    
                     
                     Spacer()
-                    CustomButton(title: "Say Hello", width: geometry.size.width - 60, action: {
+                
+                    CustomButton(title: "Say Hello", width: 295, action: {
                         
                     })
                     
-                    CustomButtonLightGreen(title: "Keep Swiping", width: geometry.size.width - 60, fontType: .bold, size: 16, action: {
+                    CustomButtonLightGreen(title: "Keep Swiping", width: 295, fontType: .bold, size: 16, action: {
                         
                     }).padding(.top,5)
+                        .padding(.bottom,10)
                     
                     
                 }
