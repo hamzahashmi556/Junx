@@ -30,7 +30,7 @@ struct HomeView: View {
                                                NavigationItem(image: .notification, action: {})],
                                   leftItems: [NavigationItem(image: .menu, action: {})],
                                   rightPadding: 20,
-                                  leftPadding: 24)
+                                  leftPadding: 20)
                     
                     TitleView()
                     
@@ -97,7 +97,7 @@ struct HomeView: View {
                         .foregroundStyle(.greenTheme)
                         .underline()
                 }
-            }
+            }.padding(.horizontal,5)
             
             ZStack {
                 ForEach(0 ..< viewModel.users.count, id: \.self) { id in

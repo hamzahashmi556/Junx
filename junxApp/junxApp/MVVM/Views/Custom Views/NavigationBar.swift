@@ -55,7 +55,12 @@ struct NavigationBar: View {
                 Spacer()
                 
                 ForEach(0 ..< rightItems.count, id: \.self) { id in
-                    Image(rightItems[id].image)
+                    Group{
+                        Image(rightItems[id].image)
+                        
+                    }.frame(width: 24, height: 24, alignment: .center)
+                   
+                    
                 }
             }
             .padding(.trailing, rightPadding)

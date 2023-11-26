@@ -24,6 +24,7 @@ struct CardsView: View {
                     
                     Text("Lets Explore!")
                         .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                        .foregroundStyle(.textMain)
                         .padding(.vertical,30)
                     
                     HStack(alignment: .bottom) {
@@ -137,6 +138,38 @@ struct CardView: View {
                         .scaledToFill()
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .padding([.horizontal, .top], 10)
+                        .overlay(
+                            VStack{
+                                Spacer()
+                                UnevenRoundedRectangle(cornerRadii: RectangleCornerRadii(
+                                    topLeading: 0,
+                                    bottomLeading: 20,
+                                    bottomTrailing: 20,
+                                    topTrailing: 0)
+                                )
+                                .foregroundStyle(.black.opacity(0.65))
+                                .frame(height: 85, alignment: .bottom)
+                                .padding(.horizontal,10)
+                                .overlay(
+                                    VStack{
+                                        HStack{
+                                            Text("Bred Jackson, 25")
+                                                .font(.customFont(name: .manuale, type: .regular, size: 24))
+                                                .foregroundStyle(.whiteonly)
+                                            Spacer()
+                                        }
+                                        HStack{
+                                            Text("Photographer")
+                                                .font(.customFont(name: .inter, type: .regular, size: 14))
+                                                .foregroundStyle(.whiteonly)
+                                            Spacer()
+                                        }
+                                        Spacer()
+                                    }.padding(.leading,35)
+                                        .padding(.top,10)
+                                )
+                            }
+                        )
                     
                     Spacer()
                     
@@ -156,6 +189,8 @@ struct CardView: View {
                     HStack {
                         
                         Text("2.5 KM Away")
+                            .font(.customFont(name: .inter, type: .regular, size: 14))
+                           // .foregroundStyle(.whiteonly)
                             .frame(height: 38)
                             .padding(.horizontal)
                             .background {
@@ -165,7 +200,7 @@ struct CardView: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(lineWidth: 2)
                                     .foregroundStyle(.white)
-                            }
+                            }.padding(.leading,5)
                         
                         Spacer()
                         
@@ -186,9 +221,9 @@ struct CardView: View {
                                 .font(.customFont(name: .inter, type: .regular, size: 14))
                         }
                         .frame(width: 45, height: 45)
-                        .padding(.trailing, 25)
+                        .padding(.trailing, 5)
                     }
-                    .padding([.top, .leading], 15)
+                    .padding(.top, 22)
                     
                     Spacer()
                 }

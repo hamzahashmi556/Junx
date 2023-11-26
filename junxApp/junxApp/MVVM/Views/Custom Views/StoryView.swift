@@ -9,18 +9,38 @@ import SwiftUI
 
 struct StoryListView: View {
     
-    @State var stories: [Int] = [1,2,3,4,5]
-    @State var images: [ImageResource] = [.ellipse10, .ellipse101, .ellipse102, .ellipse103, .ellipse104]
+    @State var stories: [Int] = [1,2,3,4]
+    @State var images: [ImageResource] = [.ellipse101, .ellipse102, .ellipse103, .ellipse104]
     
     var body: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 0) {
+                ZStack{
+                    Circle()
+                        .stroke(Color.greenTheme, lineWidth: 5)
+                    
+                    Image(.ellipse10)
+                        .resizable()
+                        .clipShape(Circle())
+                    
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image("Group 48")
+                                .offset(y:20)
+                        }
+                    }
+
+                    
+                }.frame(width: 60,height: 60)
+                
                 ForEach(0 ..< stories.count, id: \.self) { id in
                     StoryView(numberOfStories: self.stories[id], imageResource: self.images[id])
                 }
             }
-            .padding(.leading, 10)
+            .padding(.leading, 28)
             .padding(.vertical, 5)
+            
         }
     }
 }

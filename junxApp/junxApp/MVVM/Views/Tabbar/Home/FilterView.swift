@@ -103,6 +103,64 @@ struct FilterView: View {
                 }
             }
             .tint(.greenTheme)
+            
+            tintBackground()
+            VStack{
+                Spacer()
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 333, height: 227, alignment: .center)
+                    .foregroundStyle(.popupBg)
+                    .overlay(
+                        VStack{
+                            Text("Save Changes")
+                                .foregroundStyle(.textMain)
+                                .font(.customFont(name: .manuale, type: .semiBold, size: 24))
+                                .padding(.top,25)
+                            
+                            Text("If you leave this page, Your Changes will not be saved. ")
+                                .font(.customFont(name: .inter, type: .regular, size: 14))
+                                .foregroundStyle(Color("70-black"))
+                                .padding(.top,5)
+                               
+                            
+                            HStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width: 92, height: 34.25, alignment: .center)
+                                    .foregroundStyle(.greenTheme)
+                                    .shadow(color: .onlyblack.opacity(0.2), radius: 1, x: 0, y: 4)
+                                    .overlay(
+                                        HStack{
+                                            Text("Save")
+                                                .font(.customFont(name: .inter, type: .regular, size: 14))
+                                                .foregroundStyle(.whiteonly)
+                                            
+                                            
+                                        }
+                                    )
+                                
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(Color("0B8793"),lineWidth: 1)
+                                        .frame(width: 92, height: 34.25, alignment: .center)
+                                       .overlay(
+                                            HStack{
+                                                Text("Discard")
+                                                    .font(.customFont(name: .inter, type: .regular, size: 14))
+                                                    .foregroundStyle(Color("0B8793"))
+                                                
+                                                
+                                            }
+                                        )
+                                } .frame(width: 92, height: 34.25, alignment: .center)
+                            }
+                            .padding(.top)
+                            
+                            Spacer()
+                        }
+                    )
+                Spacer()
+            }.padding(.bottom,120)
+          
         }
        
     }

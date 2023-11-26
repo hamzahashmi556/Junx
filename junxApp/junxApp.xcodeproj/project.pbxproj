@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		182D12122AFC1DED001C3B5C /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D12112AFC1DED001C3B5C /* ExploreScreen.swift */; };
+		1888BFA82B138A69006780DE /* FilteredListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888BFA72B138A69006780DE /* FilteredListView.swift */; };
 		188C35352AF77F3E00904BDA /* LocationDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */; };
 		188C35372AF81B6500904BDA /* EmergencyContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */; };
 		188C35392AF82B7800904BDA /* ConfirmSafety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C35382AF82B7800904BDA /* ConfirmSafety.swift */; };
@@ -144,6 +145,7 @@
 
 /* Begin PBXFileReference section */
 		182D12112AFC1DED001C3B5C /* ExploreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
+		1888BFA72B138A69006780DE /* FilteredListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListView.swift; sourceTree = "<group>"; };
 		188C35342AF77F3E00904BDA /* LocationDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailScreen.swift; sourceTree = "<group>"; };
 		188C35362AF81B6400904BDA /* EmergencyContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactScreen.swift; sourceTree = "<group>"; };
 		188C35382AF82B7800904BDA /* ConfirmSafety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSafety.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 				ABAF0A172AF699D500ED358A /* FilterView.swift */,
 				ABAF0A1B2AF6DD6200ED358A /* FindFriendsView.swift */,
 				188C35462AFAD4D100904BDA /* UserFullView.swift */,
+				1888BFA72B138A69006780DE /* FilteredListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -873,6 +876,7 @@
 				AB05EB2F2AE47657009C861C /* OTPView.swift in Sources */,
 				AB7E565C2AEE6B2F00B94AB0 /* SearchView.swift in Sources */,
 				AB731F0E2AE59089007ACB9F /* LoginView.swift in Sources */,
+				1888BFA82B138A69006780DE /* FilteredListView.swift in Sources */,
 				AB05EB152AE46363009C861C /* Extension+Font.swift in Sources */,
 				AB59A23A2AF931CC004B7FE5 /* DMView.swift in Sources */,
 				AB31A8852AFAA42900D14F62 /* NewLocationScreen.swift in Sources */,
