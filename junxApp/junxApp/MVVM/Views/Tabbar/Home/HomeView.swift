@@ -26,7 +26,7 @@ struct HomeView: View {
                 
                 VStack(spacing: 0) {
                     
-                    NavigationBar(rightItems: [NavigationItem(image: .heart, action: {}),
+                    NavigationBar2(rightItems: [NavigationItem(image: .heart, action: {}),
                                                NavigationItem(image: .notification, action: {})],
                                   leftItems: [NavigationItem(image: .menu, action: {})],
                                   rightPadding: 20,
@@ -34,7 +34,9 @@ struct HomeView: View {
                     
                     TitleView()
                     
+                    
                     StoryListView()
+                       
                     
                     NearYouView(width: Constants.size.width - 40)
                     
@@ -74,7 +76,7 @@ struct HomeView: View {
             Text("Houston, Texas")
                 .font(.customFont(name: .SFPRO, type: .regular, size: 14))
                 .foregroundStyle(.textSecondary)
-                .offset(x:-5)
+                .offset(x:-8)
                 
         }
         .padding(.top, 15)

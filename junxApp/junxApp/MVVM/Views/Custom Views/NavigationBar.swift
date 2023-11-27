@@ -55,12 +55,12 @@ struct NavigationBar: View {
                 Spacer()
                 
                 ForEach(0 ..< rightItems.count, id: \.self) { id in
-                    Group{
+                //    Group{
                         Image(rightItems[id].image)
-                            .resizable()
-                            .frame(width: 24, height: 24, alignment: .center)
+//                            .resizable()
+//                            .frame(width: 24, height: 24, alignment: .center)
                         
-                    }.frame(width: 24, height: 24, alignment: .center)
+                   // }.frame(width: 24, height: 24, alignment: .center)
                    
                     
                 }
@@ -71,10 +71,78 @@ struct NavigationBar: View {
     }
 }
 
+
+struct NavigationBar2: View {
+    
+    @State var title = ""
+    
+    @State var rightItems: [NavigationItem] = []
+    @State var leftItems: [NavigationItem] = []
+    
+    @State var rightPadding = 0.0
+    @State var leftPadding = 0.0
+    
+    @State var height = 30.0
+    
+    var body: some View {
+        
+        ZStack {
+            
+            // Logo or Text
+            if title.isEmpty {
+                Image(.textImageLogo)
+            }
+            else {
+                Text(title)
+                    .font(.customFont(name: .inter, type: .regular, size: 16))
+            }
+            
+            // Left Items
+            
+            HStack {
+                
+                ForEach(0 ..< leftItems.count, id: \.self) { id in
+                    
+                    Image(leftItems[id].image)
+                        .resizable()
+                         .frame(width: 28, height: 28, alignment: .center)
+                }
+                
+                Spacer()
+            }
+            .padding(.leading, leftPadding)
+
+            
+            // Right Items
+            HStack {
+                Spacer()
+                
+              //  ForEach(0 ..< rightItems.count, id: \.self) { id in
+                //    Group{
+                Image(.heart)
+                           .resizable()
+                            .frame(width: 26, height: 26, alignment: .center)
+                            .offset(x:5)
+                
+                Image(.notification)
+                           .resizable()
+                            .frame(width: 26, height: 26, alignment: .center)
+                        
+                   // }.frame(width: 24, height: 24, alignment: .center)
+                   
+                    
+               // }
+            }
+            .padding(.trailing, rightPadding)
+        }
+        .frame(height: height)
+    }
+}
+
 #Preview {
     VStack {
         
-        NavigationBar(rightItems: [NavigationItem(image: .heart, action: {}),
+        NavigationBar2(rightItems: [NavigationItem(image: .heart, action: {}),
                                    NavigationItem(image: .notification, action: {})],
                       leftItems: [NavigationItem(image: .menu, action: {})],
                       rightPadding: 20,
