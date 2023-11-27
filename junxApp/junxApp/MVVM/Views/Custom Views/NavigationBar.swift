@@ -57,6 +57,8 @@ struct NavigationBar: View {
                 ForEach(0 ..< rightItems.count, id: \.self) { id in
                     Group{
                         Image(rightItems[id].image)
+                            .resizable()
+                            .frame(width: 24, height: 24, alignment: .center)
                         
                     }.frame(width: 24, height: 24, alignment: .center)
                    

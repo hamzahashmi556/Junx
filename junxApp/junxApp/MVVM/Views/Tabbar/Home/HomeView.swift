@@ -68,10 +68,14 @@ struct HomeView: View {
     func TitleView() -> some View {
         HStack {
             Image("location")
+                .resizable()
+                .frame(width: 18,height: 18)
             
             Text("Houston, Texas")
-                .font(.system(size: 14))
+                .font(.customFont(name: .SFPRO, type: .regular, size: 14))
                 .foregroundStyle(.textSecondary)
+                .offset(x:-5)
+                
         }
         .padding(.top, 15)
         .padding(.bottom, 20)
