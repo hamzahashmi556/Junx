@@ -12,7 +12,7 @@ struct TabbarView: View {
     
     @ObservedObject var homeVM: HomeViewModel
     
-    @State var index = 0
+    @State var index = 1
     
     var body: some View {
         
@@ -25,9 +25,9 @@ struct TabbarView: View {
                 }
                 .tag(0)
                 
-                NavigationStack {
+//                NavigationView {
                     ChatListView()
-                }
+//                }
                 .tag(1)
                 
                 NavigationStack {

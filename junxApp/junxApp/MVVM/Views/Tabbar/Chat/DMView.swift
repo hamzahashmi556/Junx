@@ -62,7 +62,8 @@ struct DMView: View {
                     Image(systemName: "paperplane.fill")
                         .padding(.horizontal, 5)
                 }
-                .padding([.bottom, .horizontal])
+                .padding([.vertical, .horizontal])
+                .background(.tabbarBg)
             }
             
             if showMessages {
@@ -160,6 +161,7 @@ struct DMView: View {
 }
 
 #Preview {
+//    TabbarView(homeVM: HomeViewModel(), index: 1)
     NavigationView {
         DMView()
     }
